@@ -82,15 +82,15 @@ The interface (`index.html`) loads agent data from `agents_data.js`, which must 
 
 ## Related work
 
-This experiment is part of a broader research program on **Generative Synthetic Populations (GSP)** at the [Department of Physics and Astronomy, University of Bologna](https://www.unibo.it/sitoweb/mirko.degliesposti).
+This experiment is part of a broader research program on **Generative Synthetic Populations (GSP)** at the [City Science Laboratory](https://physycom.github.io/) of the Department of Physics and Astronomy, University of Bologna.
 
 The population synthesis methodology (MaxEnt / GibbsPCD) is described in:
 
-> Degli Esposti M., Pachet F., Zucker J.-D. (2025). *Maximum Entropy Population Synthesis via Persistent Contrastive Divergence.* [arXiv preprint]
+> Degli Esposti M.(2026). *Scalable Maximum Entropy Population Synthesis via Persistent Contrastive Divergence.* [arXiv preprint](https://arxiv.org/abs/2603.27312)
 
 The validation protocol (SIVE) is described in a working paper:
 
-> Degli Esposti M. (2025). *A Validation Protocol for Generative Synthetic Populations.* [manuscript in preparation, targeting *Environment and Planning B*]
+> Degli Esposti M. (2026). *A Validation Protocol for Generative Synthetic Populations.* [manuscript in preparation, targeting *Environment and Planning B*]
 
 ---
 
