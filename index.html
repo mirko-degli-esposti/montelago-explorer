@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Albo Pretorio di Montelago — Anagrafe Sintetica SIVE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper:        #EDE7D8;
+  --paper-deep:   #E2DAC6;
+  --card:         #F6F2E7;
+  --ink:          #2A2520;
+  --ink-soft:     #5C5346;
+  --ink-faint:    #948A78;
+  --rule:         #C7BCA1;
+  --seal-blue:    #2C4A66;
+  --seal-blue-lt: #5A7892;
+  --rust:         #AD5A34;
+  --rust-soft:    #C98257;
+  --stamp-red:    #8C3A33;
+  --green:        #4B6B45;
+  --gold:         #9C7B2E;
+  --shadow:       0 2px 10px rgba(42,37,32,.08);
+  --shadow-lift:  0 6px 24px rgba(42,37,32,.14);
+}
+* { box-sizing:border-box; margin:0; padding:0; }
+html { scroll-behavior:smooth; }
+body {
+  background: var(--paper);
+  background-image:
+    radial-gradient(circle at 18% 6%, rgba(173,90,52,.05), transparent 44%),
+    radial-gradient(circle at 84% 94%, rgba(44,74,102,.05), transparent 50%);
+  color: var(--ink);
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.fr { font-family:'Fraunces',serif; font-optical-sizing:auto; }
+.mo { font-family:'IBM Plex Mono',monospace; letter-spacing:.01em; }
+
+/* ── shell ─────────────────────────────────────────────── */
+.shell { max-width:1220px; margin:0 auto; padding:0 28px 96px; }
+
+/* ── letterhead ─────────────────────────────────────────── */
+.lh { padding:38px 0 24px; border-bottom:3px double var(--ink); margin-bottom:28px; }
+.lh-top { display:flex; align-items:flex-start; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+.crest { display:flex; align-items:center; gap:14px; }
+.crest-icon { width:52px; height:52px; flex-shrink:0; }
+.crest-icon svg { width:100%; height:100%; }
+.eyebrow { font-size:11px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:2px; }
+.lh h1 { font-size:28px; font-weight:700; line-height:1.1; letter-spacing:-.02em; }
+.lh-meta { text-align:right; font-size:13px; color:var(--ink-soft); line-height:1.8; }
+.lh-sub { margin-top:12px; font-size:13px; color:var(--ink-soft); max-width:74ch; border-top:1px solid var(--rule); padding-top:10px; font-style:italic; }
+
+/* ── toolbar ────────────────────────────────────────────── */
+.toolbar {
+  display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  background:var(--paper-deep); border:1px solid var(--rule);
+  border-radius:4px; padding:12px 16px; margin-bottom:22px;
+}
+.toolbar label { font-size:12px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft); }
+.toolbar select, .toolbar input[type=text] {
+  border:1px solid var(--rule); background:var(--card);
+  border-radius:3px; padding:5px 10px; font:inherit; font-size:13px;
+  color:var(--ink); appearance:none; cursor:pointer;
+}
+.toolbar select:focus, .toolbar input:focus { outline:2px solid var(--seal-blue); outline-offset:1px; }
+#search { min-width:200px; }
+.tag-group { display:flex; gap:6px; align-items:center; }
+.tag {
+  font-size:11px; font-weight:600; letter-spacing:.07em; text-transform:uppercase;
+  padding:3px 10px; border-radius:2px; cursor:pointer; border:1.5px solid transparent;
+  transition:all .15s;
+}
+.tag-all   { background:var(--ink); color:var(--paper); border-color:var(--ink); }
+.tag-low   { border-color:var(--stamp-red); color:var(--stamp-red); }
+.tag-med   { border-color:var(--gold); color:var(--gold); }
+.tag-high  { border-color:var(--green); color:var(--green); }
+.tag.active.tag-low  { background:var(--stamp-red); color:#fff; }
+.tag.active.tag-med  { background:var(--gold); color:#fff; }
+.tag.active.tag-high { background:var(--green); color:#fff; }
+#count-badge { margin-left:auto; font-size:12px; color:var(--ink-faint); }
+
+/* ── layout ─────────────────────────────────────────────── */
+.layout { display:grid; grid-template-columns:260px 1fr; gap:20px; align-items:start; }
+@media(max-width:780px){ .layout { grid-template-columns:1fr; } }
+
+/* ── agent list ─────────────────────────────────────────── */
+.agent-list {
+  position:sticky; top:20px; max-height:calc(100vh - 60px);
+  overflow-y:auto; border:1px solid var(--rule);
+  border-radius:4px; background:var(--card);
+}
+.agent-list::-webkit-scrollbar { width:5px; }
+.agent-list::-webkit-scrollbar-thumb { background:var(--rule); border-radius:3px; }
+.al-item {
+  display:flex; align-items:center; gap:10px;
+  padding:10px 14px; border-bottom:1px solid var(--paper-deep);
+  cursor:pointer; transition:background .12s;
+}
+.al-item:hover { background:var(--paper); }
+.al-item.active { background:var(--seal-blue); color:#fff; }
+.al-item.active .al-sub { color:rgba(255,255,255,.7); }
+.al-avatar {
+  width:34px; height:34px; border-radius:50%; flex-shrink:0;
+  display:flex; align-items:center; justify-content:center;
+  font-weight:700; font-size:12px; letter-spacing:.03em;
+  font-family:'IBM Plex Mono',monospace;
+}
+.av-LOW  { background:#F0D8D4; color:var(--stamp-red); }
+.av-MED  { background:#F0E6C8; color:#7A5E14; }
+.av-HIGH { background:#D4E4D0; color:var(--green); }
+.al-item.active .al-avatar { background:rgba(255,255,255,.18); color:#fff; }
+.al-name { font-weight:600; font-size:13px; line-height:1.2; }
+.al-sub  { font-size:11px; color:var(--ink-soft); margin-top:1px; }
+.al-group-header {
+  font-size:10px; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--ink-faint); padding:8px 14px 4px; background:var(--paper-deep);
+  border-bottom:1px solid var(--rule); position:sticky; top:0; z-index:1;
+}
+
+/* ── detail panel ───────────────────────────────────────── */
+.detail { min-height:400px; }
+.no-selection {
+  border:2px dashed var(--rule); border-radius:4px;
+  padding:80px 40px; text-align:center; color:var(--ink-faint);
+}
+.no-selection .fr { font-size:22px; display:block; margin-bottom:8px; }
+
+/* ── card header ─────────────────────────────────────────── */
+.card-header {
+  background:var(--card); border:1px solid var(--rule);
+  border-radius:4px; padding:22px 26px; margin-bottom:16px;
+  display:flex; gap:20px; align-items:flex-start; flex-wrap:wrap;
+}
+.ch-avatar {
+  width:56px; height:56px; border-radius:50%; flex-shrink:0;
+  display:flex; align-items:center; justify-content:center;
+  font-weight:700; font-size:18px; font-family:'IBM Plex Mono',monospace;
+}
+.ch-name { font-size:22px; font-weight:700; line-height:1.1; letter-spacing:-.01em; }
+.ch-sub  { font-size:13px; color:var(--ink-soft); margin-top:3px; }
+.ch-tags { display:flex; gap:6px; margin-top:8px; flex-wrap:wrap; }
+.chip {
+  font-size:11px; font-weight:600; letter-spacing:.06em; text-transform:uppercase;
+  padding:2px 9px; border-radius:2px;
+}
+.chip-LOW  { background:#F0D8D4; color:var(--stamp-red); }
+.chip-MED  { background:#F0E6C8; color:#7A5E14; }
+.chip-HIGH { background:#D4E4D0; color:var(--green); }
+.chip-persona { background:var(--paper-deep); color:var(--ink-soft); font-style:italic; text-transform:none; letter-spacing:0; }
+.ch-bio { font-size:13px; color:var(--ink-soft); margin-top:10px; line-height:1.55; font-style:italic; border-top:1px solid var(--paper-deep); padding-top:10px; }
+
+/* ── condition tabs ──────────────────────────────────────── */
+.cond-tabs { display:flex; gap:0; border-bottom:2px solid var(--rule); margin-bottom:18px; flex-wrap:wrap; }
+.cond-tab {
+  padding:7px 16px; font-size:12px; font-weight:600; letter-spacing:.07em;
+  text-transform:uppercase; cursor:pointer; border-bottom:2px solid transparent;
+  margin-bottom:-2px; transition:all .15s; color:var(--ink-soft);
+  font-family:'IBM Plex Mono',monospace;
+}
+.cond-tab:hover { color:var(--ink); }
+.cond-tab.active { color:var(--seal-blue); border-bottom-color:var(--seal-blue); }
+
+/* ── condition content ───────────────────────────────────── */
+.cond-panel { display:none; }
+.cond-panel.active { display:block; }
+
+/* ── section ─────────────────────────────────────────────── */
+.section { margin-bottom:18px; }
+.section-title {
+  font-size:10px; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--ink-faint); border-bottom:1px solid var(--rule);
+  padding-bottom:5px; margin-bottom:12px;
+}
+
+/* ── metrics grid ────────────────────────────────────────── */
+.metrics-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:10px; }
+.metric-card {
+  background:var(--card); border:1px solid var(--rule); border-radius:4px;
+  padding:12px 14px;
+}
+.metric-label { font-size:11px; color:var(--ink-faint); text-transform:uppercase; letter-spacing:.08em; margin-bottom:6px; }
+.metric-vals { display:flex; align-items:center; gap:10px; }
+.metric-val { font-size:22px; font-weight:700; font-family:'IBM Plex Mono',monospace; }
+.metric-arrow { font-size:16px; color:var(--ink-faint); }
+.metric-delta { font-size:13px; font-weight:600; font-family:'IBM Plex Mono',monospace; }
+.delta-pos { color:var(--green); }
+.delta-neg { color:var(--stamp-red); }
+.delta-zero { color:var(--ink-faint); }
+
+/* ── emotion & intention ─────────────────────────────────── */
+.ei-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+.ei-card {
+  background:var(--card); border:1px solid var(--rule); border-radius:4px; padding:12px 14px;
+}
+.ei-label { font-size:11px; color:var(--ink-faint); text-transform:uppercase; letter-spacing:.08em; margin-bottom:6px; }
+.ei-vals { display:flex; flex-direction:column; gap:4px; }
+.ei-pre, .ei-post { font-size:13px; }
+.ei-pre  { color:var(--ink-soft); }
+.ei-post { font-weight:600; color:var(--ink); }
+.ei-badge {
+  display:inline-block; font-size:11px; padding:1px 7px; border-radius:10px; margin-right:4px;
+}
+.ei-phase { font-size:10px; font-weight:600; letter-spacing:.08em; color:var(--ink-faint); text-transform:uppercase; margin-right:4px; }
+
+/* ── reazioni ────────────────────────────────────────────── */
+.reactions-list { display:flex; flex-direction:column; gap:8px; }
+.reaction-item {
+  display:flex; gap:12px; padding:10px 14px;
+  background:var(--card); border:1px solid var(--rule); border-radius:3px;
+}
+.rx-step {
+  font-size:11px; font-weight:700; font-family:'IBM Plex Mono',monospace;
+  color:var(--seal-blue-lt); flex-shrink:0; min-width:26px; padding-top:1px;
+}
+.rx-text { font-size:13px; color:var(--ink-soft); line-height:1.55; }
+
+/* ── motivazione ─────────────────────────────────────────── */
+.motiv-box {
+  background:var(--card); border:1px solid var(--rule); border-left:3px solid var(--seal-blue);
+  border-radius:3px; padding:14px 18px;
+}
+.motiv-proto { font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--seal-blue-lt); margin-bottom:6px; }
+.motiv-text { font-size:14px; line-height:1.65; color:var(--ink); font-style:italic; }
+
+/* ── comunicazione ufficiale ─────────────────────────────── */
+.comm-box {
+  background:var(--card); border:1px solid var(--rule);
+  border-left:3px solid var(--rust); border-radius:3px; padding:14px 18px;
+}
+.comm-none { border-left-color:var(--rule); color:var(--ink-faint); font-style:italic; }
+.comm-header {
+  font-size:10px; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--rust); margin-bottom:8px;
+}
+.comm-text { font-size:13.5px; line-height:1.7; color:var(--ink); }
+
+/* ── vuoto ───────────────────────────────────────────────── */
+.cond-missing { color:var(--ink-faint); font-style:italic; font-size:13px; padding:20px 0; }
+
+/* ── stamp ───────────────────────────────────────────────── */
+.stamp-row { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px; }
+.stamp {
+  font-family:'IBM Plex Mono',monospace; font-size:10px; font-weight:500;
+  border:1px solid currentColor; border-radius:2px; padding:2px 7px; opacity:.55;
+  letter-spacing:.04em;
+}
+.stamp-pos  { color:var(--green); }
+.stamp-neg  { color:var(--stamp-red); }
+.stamp-pla  { color:var(--ink-faint); }
+.stamp-ctrl { color:var(--ink-faint); }
+.stamp-pos2 { color:var(--seal-blue-lt); }
+.stamp-posw { color:var(--rust-soft); }
+
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <!-- letterhead -->
+  <header class="lh">
+    <div class="lh-top">
+      <div class="crest">
+        <div class="crest-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 4 L42 14 L42 26 C42 36 34 43 24 44 C14 43 6 36 6 26 L6 14 Z" fill="#EDE7D8" stroke="#2A2520" stroke-width="2"/>
+            <path d="M18 23 L22 27 L31 18" stroke="#2C4A66" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div>
+          <div class="eyebrow">Comune di Montelago</div>
+          <h1 class="fr">Albo Pretorio Digitale</h1>
+        </div>
+      </div>
+      <div class="lh-meta mo">
+        Anagrafe della popolazione sintetica<br>
+        Esperimento SIVE · deepseek-chat<br>
+        <span id="meta-n">—</span> cittadini · 6 condizioni
+      </div>
+    </div>
+    <p class="lh-sub">
+      Montelago non esiste. I suoi 120 abitanti sono persone sintetiche generate
+      per studiare come cittadini con livelli di fiducia istituzionale diversi (LOW / MED / HIGH)
+      reagiscono alle comunicazioni ufficiali del proprio Comune — esperimento within-subjects su LLM.
+    </p>
+  </header>
+
+  <!-- toolbar -->
+  <div class="toolbar">
+    <label for="search">Cerca</label>
+    <input type="text" id="search" placeholder="nome, persona, occupazione…">
+    <label>Gruppo</label>
+    <div class="tag-group">
+      <span class="tag tag-all active" data-g="ALL">Tutti</span>
+      <span class="tag tag-low"  data-g="LOW">LOW</span>
+      <span class="tag tag-med"  data-g="MED">MED</span>
+      <span class="tag tag-high" data-g="HIGH">HIGH</span>
+    </div>
+    <label for="cond-filter">Condizione</label>
+    <select id="cond-filter">
+      <option value="">— tutte —</option>
+      <option value="POS">POS</option>
+      <option value="POS2">POS2</option>
+      <option value="POSW">POSW</option>
+      <option value="NEG">NEG</option>
+      <option value="PLA">PLA</option>
+      <option value="CTRL">CTRL</option>
+    </select>
+    <span id="count-badge" class="mo">— agenti</span>
+  </div>
+
+  <!-- layout -->
+  <div class="layout">
+    <div class="agent-list" id="agent-list"></div>
+    <div class="detail"   id="detail">
+      <div class="no-selection">
+        <span class="fr">Seleziona un cittadino</span>
+        Scegli un agente dalla lista per consultare il fascicolo.
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- dati agenti — includi agents_data.js nella stessa cartella -->
+<script src="agents_data.js"></script>
+<script>
+/* ============================================================
+   MONTELAGO EXPLORER — logica UI
+   ============================================================ */
+
+const COND_ORDER = ['POS','POS2','POSW','NEG','PLA','CTRL'];
+const COND_MSG = {
+  POS: "Il Comune di Montelago comunica che i lavori di sostituzione completa della rete idrica nel quartiere inizieranno lunedì prossimo. Il progetto, finanziato con fondi europei, prevede la posa di nuove tubature su tutti i tratti principali e si concluderà entro 60 giorni. La qualità dell'acqua sarà monitorata quotidianamente da tecnici certificati e i risultati saranno pubblicati ogni settimana sul sito del Comune. Eventuali interruzioni del servizio saranno comunicate con almeno 48 ore di anticipo. Il Comune garantisce un numero verde attivo h24 per segnalazioni e informazioni.",
+  POS2: "Il Comune di Montelago comunica che i lavori di sostituzione completa della rete idrica nel quartiere inizieranno lunedì prossimo. Il progetto, finanziato con fondi europei, prevede la posa di nuove tubature su tutti i tratti principali e si concluderà entro 60 giorni. La qualità dell'acqua sarà monitorata quotidianamente da tecnici certificati e i risultati saranno pubblicati ogni settimana sul sito del Comune. Eventuali interruzioni del servizio saranno comunicate con almeno 48 ore di anticipo. Il Comune garantisce un numero verde attivo h24 per segnalazioni e informazioni.",
+  POSW: "Il Comune di Montelago informa che sono in corso valutazioni tecniche per un possibile intervento di miglioramento della rete idrica nel quartiere. Non sono ancora disponibili tempistiche definite né dettagli sulle modalità di intervento. L'amministrazione comunale seguirà l'evoluzione della situazione e comunicherà eventuali aggiornamenti.",
+  NEG:  "Il Comune di Montelago comunica che, a causa di ripetuti guasti alle tubature della rete idrica, si verificheranno interruzioni del servizio idrico nel quartiere per almeno i prossimi tre mesi. I lavori di riparazione non possono essere avviati prima dell'autunno per mancanza di fondi. Nelle ultime analisi, i valori di torbidità dell'acqua hanno superato i limiti consigliati in alcune vie della zona. Il Comune si scusa per i disagi.",
+  PLA:  "Il Comune di Montelago comunica che sabato prossimo si terrà in Piazza Centrale la Festa del Quartiere, con mercatino dell'artigianato locale, musica dal vivo e attività per bambini. L'evento è organizzato in collaborazione con le associazioni di volontariato locali e avrà inizio alle ore 10:00. L'ingresso è libero e gratuito per tutti i cittadini.",
+  CTRL: null,
+};
+
+const COND_DESC = {
+  POS:  'Comunicazione positiva forte',
+  POS2: 'Replica rumore (noise floor)',
+  POSW: 'Positiva debole',
+  NEG:  'Comunicazione negativa',
+  PLA:  'Placebo inerte',
+  CTRL: 'Controllo (nessun stimolo)',
+};
+const COND_STAMP = {
+  POS:'stamp-pos', POS2:'stamp-pos2', POSW:'stamp-posw',
+  NEG:'stamp-neg', PLA:'stamp-pla', CTRL:'stamp-ctrl'
+};
+
+const NUMERIC_ITEMS = ['fiducia_istituzione','credibilita','adeguatezza_info'];
+const ITEM_LABEL = {
+  fiducia_istituzione: 'Fiducia istituzione',
+  credibilita:         'Credibilità',
+  adeguatezza_info:    'Adeguatezza info',
+};
+const EMOZIONI_ICON = {
+  rabbia:'😠', preoccupazione:'😟', speranza:'🌱',
+  sollievo:'😌', indifferenza:'😑', '':'—'
+};
+
+// ── stato ────────────────────────────────────────────────────
+let filterGroup  = 'ALL';
+let filterCond   = '';
+let filterSearch = '';
+let activeId     = null;
+let activeCond   = null;
+
+// ── lista ─────────────────────────────────────────────────────
+function initCountBadge(){
+  document.getElementById('meta-n').textContent = AGENTS.length;
+}
+
+function filteredAgents(){
+  return AGENTS.filter(a => {
+    if (filterGroup !== 'ALL' && a.gruppo !== filterGroup) return false;
+    if (filterCond && !a.data[filterCond]) return false;
+    if (filterSearch){
+      const q = filterSearch.toLowerCase();
+      return (a.name+a.persona+a.occ+a.bio).toLowerCase().includes(q);
+    }
+    return true;
+  });
+}
+
+function initials(name){
+  return name.trim().split(' ').slice(0,2).map(p=>p[0].toUpperCase()).join('');
+}
+
+function renderList(){
+  const list = document.getElementById('agent-list');
+  const agents = filteredAgents();
+  document.getElementById('count-badge').textContent = agents.length + ' agenti';
+
+  if (!agents.length){
+    list.innerHTML = '<div style="padding:20px 14px;color:var(--ink-faint);font-size:13px;font-style:italic;">Nessun agente corrisponde ai filtri.</div>';
+    return;
+  }
+
+  // raggruppa per gruppo
+  const groups = {};
+  agents.forEach(a => {
+    if (!groups[a.gruppo]) groups[a.gruppo] = [];
+    groups[a.gruppo].push(a);
+  });
+
+  let html = '';
+  ['LOW','MED','HIGH'].forEach(g => {
+    if (!groups[g]) return;
+    html += `<div class="al-group-header">${g} · ${groups[g].length}</div>`;
+    groups[g].forEach(a => {
+      const active = a.id === activeId ? ' active' : '';
+      html += `
+        <div class="al-item${active}" data-id="${a.id}">
+          <div class="al-avatar av-${a.gruppo}">${initials(a.name)}</div>
+          <div>
+            <div class="al-name">${a.name}</div>
+            <div class="al-sub mo">${a.age}a · ${a.occ.slice(0,26)}</div>
+          </div>
+        </div>`;
+    });
+  });
+  list.innerHTML = html;
+
+  list.querySelectorAll('.al-item').forEach(el => {
+    el.addEventListener('click', () => {
+      const id = +el.dataset.id;
+      selectAgent(id);
+    });
+  });
+}
+
+// ── selezione agente ──────────────────────────────────────────
+function selectAgent(id){
+  activeId = id;
+  const agent = AGENTS.find(a => a.id === id);
+  if (!agent) return;
+
+  // tab di default: prima condizione disponibile (rispettando filterCond)
+  const conds = COND_ORDER.filter(c => agent.data[c]);
+  if (filterCond && agent.data[filterCond]) activeCond = filterCond;
+  else if (!activeCond || !agent.data[activeCond]) activeCond = conds[0] || null;
+
+  renderList();
+  renderDetail(agent);
+
+  // scroll
+  const el = document.querySelector('.al-item.active');
+  if (el) el.scrollIntoView({ block:'nearest' });
+}
+
+// ── detail ─────────────────────────────────────────────────────
+function renderDetail(agent){
+  const panel = document.getElementById('detail');
+  const conds  = COND_ORDER.filter(c => agent.data[c]);
+
+  // header
+  let html = `
+    <div class="card-header">
+      <div class="ch-avatar av-${agent.gruppo}">${initials(agent.name)}</div>
+      <div style="flex:1;min-width:0">
+        <div class="ch-name fr">${agent.name}</div>
+        <div class="ch-sub">${agent.age} anni · ${agent.gender === 'M' ? '♂' : '♀'} · ${agent.occ}</div>
+        <div class="ch-tags">
+          <span class="chip chip-${agent.gruppo}">${agent.gruppo}</span>
+          <span class="chip chip-persona">${agent.persona}</span>
+        </div>
+        <div class="ch-bio">${agent.bio}</div>
+      </div>
+    </div>`;
+
+  // stamp condizioni
+  html += `<div class="stamp-row">`;
+  conds.forEach(c => {
+    html += `<span class="stamp ${COND_STAMP[c]}">${c}</span>`;
+  });
+  html += `</div>`;
+
+  // tabs
+  html += `<div class="cond-tabs">`;
+  conds.forEach(c => {
+    const active = c === activeCond ? ' active' : '';
+    html += `<div class="cond-tab${active}" data-cond="${c}">${c}</div>`;
+  });
+  html += `</div>`;
+
+  // panels
+  conds.forEach(c => {
+    const d = agent.data[c];
+    const active = c === activeCond ? ' active' : '';
+    html += `<div class="cond-panel${active}" data-panel="${c}">`;
+    html += `<div style="font-size:12px;color:var(--ink-faint);margin-bottom:14px;font-style:italic">${COND_DESC[c] || c}</div>`;
+
+    // comunicazione ufficiale
+    const msg = COND_MSG[c];
+    if (msg){
+      html += `<div class="section"><div class="section-title">Comunicazione ricevuta</div>
+        <div class="comm-box"><div class="comm-header mo">📋 Comunicato Ufficiale — Comune di Montelago</div>
+        <div class="comm-text">${esc(msg)}</div></div></div>`;
+    } else {
+      html += `<div class="section"><div class="section-title">Comunicazione ricevuta</div>
+        <div class="comm-box comm-none"><em>Nessuna comunicazione (condizione di controllo)</em></div></div>`;
+    }
+
+    // metriche numeriche
+    const numItems = NUMERIC_ITEMS.filter(k => d.pre[k] !== undefined || d.post[k] !== undefined);
+    if (numItems.length){
+      html += `<div class="section"><div class="section-title">Misurazioni PRE → POST</div><div class="metrics-grid">`;
+      numItems.forEach(k => {
+        const pre  = d.pre[k]  ?? '—';
+        const post = d.post[k] ?? '—';
+        const delta = (typeof pre === 'number' && typeof post === 'number') ? post - pre : null;
+        let dClass = 'delta-zero', dSign = '';
+        if (delta !== null){
+          if (delta > 0){ dClass = 'delta-pos'; dSign = '+'; }
+          else if (delta < 0){ dClass = 'delta-neg'; }
+        }
+        html += `
+          <div class="metric-card">
+            <div class="metric-label">${ITEM_LABEL[k] || k}</div>
+            <div class="metric-vals">
+              <span class="metric-val">${pre}</span>
+              <span class="metric-arrow">→</span>
+              <span class="metric-val">${post}</span>
+              ${delta !== null ? `<span class="metric-delta ${dClass}">${dSign}${delta}</span>` : ''}
+            </div>
+          </div>`;
+      });
+      html += `</div></div>`;
+    }
+
+    // emozione e intenzione
+    const emozioniPre  = d.pre['emozione']   || '';
+    const emozioniPost = d.post['emozione']  || '';
+    const intPre       = d.pre['intenzione']  || '';
+    const intPost      = d.post['intenzione'] || '';
+    if (emozioniPre || emozioniPost || intPre || intPost){
+      html += `<div class="section"><div class="section-title">Emozione e Intenzione</div><div class="ei-grid">`;
+
+      // emozione
+      html += `<div class="ei-card"><div class="ei-label">Emozione</div><div class="ei-vals">`;
+      html += `<div class="ei-pre"><span class="ei-phase">PRE</span>${EMOZIONI_ICON[emozioniPre] || ''} ${emozioniPre || '—'}</div>`;
+      html += `<div class="ei-post"><span class="ei-phase">POST</span>${EMOZIONI_ICON[emozioniPost] || ''} ${emozioniPost || '—'}</div>`;
+      html += `</div></div>`;
+
+      // intenzione
+      html += `<div class="ei-card"><div class="ei-label">Intenzione</div><div class="ei-vals">`;
+      html += `<div class="ei-pre"><span class="ei-phase">PRE</span>${intPre || '—'}</div>`;
+      html += `<div class="ei-post"><span class="ei-phase">POST</span><strong>${intPost || '—'}</strong></div>`;
+      html += `</div></div>`;
+
+      html += `</div></div>`;
+    }
+
+    // reazioni
+    if (d.reazioni && d.reazioni.length){
+      html += `<div class="section"><div class="section-title">Reazioni (${d.reazioni.length} step)</div><div class="reactions-list">`;
+      d.reazioni.forEach((r, i) => {
+        html += `<div class="reaction-item"><span class="rx-step mo">${String(i+1).padStart(2,'0')}</span><span class="rx-text">${esc(r)}</span></div>`;
+      });
+      html += `</div></div>`;
+    }
+
+    // motivazione libera
+    if (d.motiv){
+      html += `<div class="section"><div class="section-title">Motivazione libera (POST)</div>
+        <div class="motiv-box">
+          <div class="motiv-proto mo">Prot. N. ${String(agent.id).padStart(5,'0')}/${c}/2026</div>
+          <div class="motiv-text">${esc(d.motiv)}</div>
+        </div></div>`;
+    }
+
+    html += `</div>`; // fine cond-panel
+  });
+
+  panel.innerHTML = html;
+
+  // tab click
+  panel.querySelectorAll('.cond-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      activeCond = tab.dataset.cond;
+      panel.querySelectorAll('.cond-tab').forEach(t => t.classList.toggle('active', t.dataset.cond === activeCond));
+      panel.querySelectorAll('.cond-panel').forEach(p => p.classList.toggle('active', p.dataset.panel === activeCond));
+    });
+  });
+}
+
+function esc(s){
+  if (!s) return '';
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+// ── filtri ────────────────────────────────────────────────────
+document.querySelectorAll('.tag').forEach(tag => {
+  tag.addEventListener('click', () => {
+    document.querySelectorAll('.tag').forEach(t => t.classList.remove('active'));
+    tag.classList.add('active');
+    filterGroup = tag.dataset.g;
+    renderList();
+  });
+});
+
+document.getElementById('cond-filter').addEventListener('change', e => {
+  filterCond = e.target.value;
+  renderList();
+});
+
+document.getElementById('search').addEventListener('input', e => {
+  filterSearch = e.target.value.trim();
+  renderList();
+});
+
+// ── init ──────────────────────────────────────────────────────
+initCountBadge();
+renderList();
+if (AGENTS.length) selectAgent(AGENTS[0].id);
+</script>
+</body>
+</html>
