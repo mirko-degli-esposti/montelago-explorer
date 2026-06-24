@@ -17,7 +17,7 @@
   --ink-faint:    #948A78;
   --rule:         #C7BCA1;
   --seal-blue:    #2C4A66;
-  --seal-blue-lt: #5A7892;
+  --seal-blue-soft:#5A7892;
   --rust:         #AD5A34;
   --rust-soft:    #C98257;
   --stamp-red:    #8C3A33;
@@ -39,230 +39,229 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
-.fr { font-family:'Fraunces',serif; font-optical-sizing:auto; }
-.mo { font-family:'IBM Plex Mono',monospace; letter-spacing:.01em; }
+
+/* ── banner ─────────────────────────────────────────────── */
+.banner {
+  background: var(--seal-blue); color: rgba(255,255,255,.92);
+  font-size: 13px; padding: 10px 28px;
+  display:flex; align-items:center; gap:16px; flex-wrap:wrap; line-height:1.45;
+}
+.banner strong { color:#fff; font-weight:600; }
+.banner a { color:#A8C8E8; text-underline-offset:3px; }
+.banner a:hover { color:#fff; }
+.banner-pill {
+  display:inline-block; background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.25);
+  border-radius:2px; font-family:'IBM Plex Mono',monospace; font-size:10px; font-weight:600;
+  letter-spacing:.08em; padding:2px 8px; text-transform:uppercase; white-space:nowrap;
+}
+.banner-it { background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.2); border-radius:2px; font-size:11px; padding:2px 8px; white-space:nowrap; }
+.banner-right { margin-left:auto; display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
 
 /* ── shell ─────────────────────────────────────────────── */
-.shell { max-width:1220px; margin:0 auto; padding:0 28px 96px; }
+.shell { max-width:1200px; margin:0 auto; padding:0 28px 96px; }
 
 /* ── letterhead ─────────────────────────────────────────── */
 .lh { padding:38px 0 24px; border-bottom:3px double var(--ink); margin-bottom:28px; }
 .lh-top { display:flex; align-items:flex-start; justify-content:space-between; gap:20px; flex-wrap:wrap; }
 .crest { display:flex; align-items:center; gap:14px; }
 .crest-icon { width:52px; height:52px; flex-shrink:0; }
-.crest-icon svg { width:100%; height:100%; }
 .eyebrow { font-size:11px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:2px; }
-.lh h1 { font-size:28px; font-weight:700; line-height:1.1; letter-spacing:-.02em; }
-.lh-meta { text-align:right; font-size:13px; color:var(--ink-soft); line-height:1.8; }
-.lh-sub { margin-top:12px; font-size:13px; color:var(--ink-soft); max-width:74ch; border-top:1px solid var(--rule); padding-top:10px; font-style:italic; }
+.lh h1 { font-family:'Fraunces',serif; font-size:28px; font-weight:700; line-height:1.1; letter-spacing:-.02em; }
+.lh-meta { text-align:right; font-size:13px; color:var(--ink-soft); line-height:1.8; font-family:'IBM Plex Mono',monospace; }
+.lh-sub { margin-top:12px; font-size:13px; color:var(--ink-soft); max-width:80ch; border-top:1px solid var(--rule); padding-top:10px; font-style:italic; }
 
-/* ── toolbar ────────────────────────────────────────────── */
-.toolbar {
-  display:flex; align-items:center; gap:10px; flex-wrap:wrap;
-  background:var(--paper-deep); border:1px solid var(--rule);
-  border-radius:4px; padding:12px 16px; margin-bottom:22px;
+/* ── nav tabs ───────────────────────────────────────────── */
+.tabs { display:flex; gap:2px; margin-bottom:32px; border-bottom:1px solid var(--rule); }
+.tab-btn {
+  font-family:'Fraunces',serif; font-size:15px; font-weight:500;
+  padding:11px 22px 13px; background:transparent; border:none; color:var(--ink-faint);
+  cursor:pointer; position:relative; transition:color .15s;
 }
-.toolbar label { font-size:12px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft); }
-.toolbar select, .toolbar input[type=text] {
-  border:1px solid var(--rule); background:var(--card);
-  border-radius:3px; padding:5px 10px; font:inherit; font-size:13px;
-  color:var(--ink); appearance:none; cursor:pointer;
-}
-.toolbar select:focus, .toolbar input:focus { outline:2px solid var(--seal-blue); outline-offset:1px; }
-#search { min-width:200px; }
-.tag-group { display:flex; gap:6px; align-items:center; }
-.tag {
-  font-size:11px; font-weight:600; letter-spacing:.07em; text-transform:uppercase;
-  padding:3px 10px; border-radius:2px; cursor:pointer; border:1.5px solid transparent;
-  transition:all .15s;
-}
-.tag-all   { background:var(--ink); color:var(--paper); border-color:var(--ink); }
-.tag-low   { border-color:var(--stamp-red); color:var(--stamp-red); }
-.tag-med   { border-color:var(--gold); color:var(--gold); }
-.tag-high  { border-color:var(--green); color:var(--green); }
-.tag.active.tag-low  { background:var(--stamp-red); color:#fff; }
-.tag.active.tag-med  { background:var(--gold); color:#fff; }
-.tag.active.tag-high { background:var(--green); color:#fff; }
-#count-badge { margin-left:auto; font-size:12px; color:var(--ink-faint); }
+.tab-btn .num { font-family:'IBM Plex Mono',monospace; font-size:11px; margin-right:8px; color:var(--ink-faint); }
+.tab-btn:hover { color:var(--ink-soft); }
+.tab-btn.active { color:var(--ink); }
+.tab-btn.active::after { content:""; position:absolute; left:0; right:0; bottom:-1px; height:2px; background:var(--rust); }
+.tab-btn.active .num { color:var(--rust); }
 
-/* ── layout ─────────────────────────────────────────────── */
-.layout { display:grid; grid-template-columns:260px 1fr; gap:20px; align-items:start; }
-@media(max-width:780px){ .layout { grid-template-columns:1fr; } }
+.scene { display:none; animation:fadeIn .25s ease; }
+.scene.active { display:block; }
+@keyframes fadeIn { from { opacity:0; transform:translateY(4px); } to { opacity:1; transform:translateY(0); } }
 
-/* ── agent list ─────────────────────────────────────────── */
-.agent-list {
-  position:sticky; top:20px; max-height:calc(100vh - 60px);
-  overflow-y:auto; border:1px solid var(--rule);
-  border-radius:4px; background:var(--card);
+/* ── Scena I: Anagrafe ─────────────────────────────────── */
+.anagrafe-toolbar {
+  display:flex; gap:10px; flex-wrap:wrap; align-items:center;
+  margin-bottom:22px; padding-bottom:18px; border-bottom:1px solid var(--rule);
 }
-.agent-list::-webkit-scrollbar { width:5px; }
-.agent-list::-webkit-scrollbar-thumb { background:var(--rule); border-radius:3px; }
-.al-item {
-  display:flex; align-items:center; gap:10px;
-  padding:10px 14px; border-bottom:1px solid var(--paper-deep);
-  cursor:pointer; transition:background .12s;
+.search-box { flex:1; min-width:220px; position:relative; }
+.search-box input {
+  width:100%; font-family:'IBM Plex Sans',sans-serif; font-size:14px;
+  padding:9px 14px 9px 36px; border:1px solid var(--rule); border-radius:3px;
+  background:var(--card); color:var(--ink);
 }
-.al-item:hover { background:var(--paper); }
-.al-item.active { background:var(--seal-blue); color:#fff; }
-.al-item.active .al-sub { color:rgba(255,255,255,.7); }
-.al-avatar {
-  width:34px; height:34px; border-radius:50%; flex-shrink:0;
-  display:flex; align-items:center; justify-content:center;
-  font-weight:700; font-size:12px; letter-spacing:.03em;
-  font-family:'IBM Plex Mono',monospace;
+.search-box input:focus { outline:none; border-color:var(--seal-blue-soft); }
+.search-box svg { position:absolute; left:12px; top:50%; transform:translateY(-50%); width:15px; height:15px; color:var(--ink-faint); }
+.search-box input::placeholder { color:var(--ink-faint); }
+.filter-chip {
+  font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:.03em;
+  padding:7px 13px; border:1px solid var(--rule); border-radius:3px;
+  background:var(--card); color:var(--ink-soft); cursor:pointer; white-space:nowrap;
 }
-.av-LOW  { background:#F0D8D4; color:var(--stamp-red); }
-.av-MED  { background:#F0E6C8; color:#7A5E14; }
-.av-HIGH { background:#D4E4D0; color:var(--green); }
-.al-item.active .al-avatar { background:rgba(255,255,255,.18); color:#fff; }
-.al-name { font-weight:600; font-size:13px; line-height:1.2; }
-.al-sub  { font-size:11px; color:var(--ink-soft); margin-top:1px; }
-.al-group-header {
-  font-size:10px; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
-  color:var(--ink-faint); padding:8px 14px 4px; background:var(--paper-deep);
-  border-bottom:1px solid var(--rule); position:sticky; top:0; z-index:1;
+.filter-chip.on-low  { background:#F4E3DC; border-color:var(--stamp-red); color:var(--stamp-red); }
+.filter-chip.on-med  { background:#F2E7CE; border-color:var(--gold); color:#7A5F22; }
+.filter-chip.on-high { background:#E4EADD; border-color:var(--green); color:var(--green); }
+.filter-chip.on-all  { background:var(--ink); border-color:var(--ink); color:var(--paper); }
+.result-count { font-size:12px; color:var(--ink-faint); margin-bottom:14px; font-family:'IBM Plex Mono',monospace; }
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:12px; }
+.citizen-card {
+  background:var(--card); border:1px solid var(--rule); border-radius:4px; padding:16px;
+  cursor:pointer; transition:border-color .15s, transform .1s, box-shadow .15s;
+  position:relative; overflow:hidden;
 }
+.citizen-card:hover { border-color:var(--ink-soft); box-shadow:var(--shadow); transform:translateY(-1px); }
+.citizen-card::before { content:""; position:absolute; top:0; left:0; bottom:0; width:3px; }
+.citizen-card.g-low::before  { background:var(--stamp-red); }
+.citizen-card.g-med::before  { background:var(--gold); }
+.citizen-card.g-high::before { background:var(--green); }
+.card-top { display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:10px; }
+.card-id  { font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--ink-faint); }
+.card-tag { font-family:'IBM Plex Mono',monospace; font-size:9.5px; letter-spacing:.05em; text-transform:uppercase; padding:2px 6px; border-radius:2px; }
+.card-tag.g-low  { background:#F4E3DC; color:var(--stamp-red); }
+.card-tag.g-med  { background:#F2E7CE; color:#7A5F22; }
+.card-tag.g-high { background:#E4EADD; color:var(--green); }
+.card-name { font-family:'Fraunces',serif; font-size:16.5px; font-weight:600; margin-bottom:1px; }
+.card-meta { font-size:11.5px; color:var(--ink-soft); margin-bottom:10px; }
+.card-quote { font-size:12px; font-style:italic; color:var(--ink-soft); line-height:1.55; border-left:2px solid var(--rule); padding-left:9px; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
 
-/* ── detail panel ───────────────────────────────────────── */
-.detail { min-height:400px; }
-.no-selection {
-  border:2px dashed var(--rule); border-radius:4px;
-  padding:80px 40px; text-align:center; color:var(--ink-faint);
-}
-.no-selection .fr { font-size:22px; display:block; margin-bottom:8px; }
+/* ── Scena II: Fascicolo ───────────────────────────────── */
+.fascicolo-layout { display:grid; grid-template-columns:250px 1fr; gap:22px; align-items:start; }
+@media(max-width:800px){ .fascicolo-layout { grid-template-columns:1fr; } }
+.roster { position:sticky; top:16px; }
+.roster-label { font-family:'IBM Plex Mono',monospace; font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-faint); margin-bottom:10px; }
+.roster-search input { width:100%; font-size:13px; padding:7px 10px; margin-bottom:10px; border:1px solid var(--rule); border-radius:3px; background:var(--card); color:var(--ink); }
+.roster-list { max-height:540px; overflow-y:auto; display:flex; flex-direction:column; gap:4px; padding-right:4px; }
+.roster-item { display:flex; align-items:center; gap:9px; padding:8px 9px; border-radius:3px; cursor:pointer; border:1px solid transparent; font-size:12.5px; }
+.roster-item:hover { background:var(--card); }
+.roster-item.sel { background:var(--card); border-color:var(--rule); }
+.roster-dot { width:8px; height:8px; border-radius:50%; flex-shrink:0; }
+.roster-dot.g-low  { background:var(--stamp-red); }
+.roster-dot.g-med  { background:var(--gold); }
+.roster-dot.g-high { background:var(--green); }
+.roster-item-name { font-weight:500; color:var(--ink); }
+.roster-item-occ  { color:var(--ink-faint); font-size:11px; }
+.roster-list::-webkit-scrollbar { width:6px; }
+.roster-list::-webkit-scrollbar-thumb { background:var(--rule); border-radius:3px; }
 
-/* ── card header ─────────────────────────────────────────── */
-.card-header {
-  background:var(--card); border:1px solid var(--rule);
-  border-radius:4px; padding:22px 26px; margin-bottom:16px;
-  display:flex; gap:20px; align-items:flex-start; flex-wrap:wrap;
-}
-.ch-avatar {
-  width:56px; height:56px; border-radius:50%; flex-shrink:0;
-  display:flex; align-items:center; justify-content:center;
-  font-weight:700; font-size:18px; font-family:'IBM Plex Mono',monospace;
-}
-.ch-name { font-size:22px; font-weight:700; line-height:1.1; letter-spacing:-.01em; }
-.ch-sub  { font-size:13px; color:var(--ink-soft); margin-top:3px; }
-.ch-tags { display:flex; gap:6px; margin-top:8px; flex-wrap:wrap; }
-.chip {
-  font-size:11px; font-weight:600; letter-spacing:.06em; text-transform:uppercase;
-  padding:2px 9px; border-radius:2px;
-}
-.chip-LOW  { background:#F0D8D4; color:var(--stamp-red); }
-.chip-MED  { background:#F0E6C8; color:#7A5E14; }
-.chip-HIGH { background:#D4E4D0; color:var(--green); }
-.chip-persona { background:var(--paper-deep); color:var(--ink-soft); font-style:italic; text-transform:none; letter-spacing:0; }
-.ch-bio { font-size:13px; color:var(--ink-soft); margin-top:10px; line-height:1.55; font-style:italic; border-top:1px solid var(--paper-deep); padding-top:10px; }
+.dossier { background:var(--card); border:1px solid var(--rule); border-radius:5px; overflow:hidden; }
+.dossier-header { padding:22px 26px 18px; border-bottom:1px solid var(--rule); display:flex; align-items:flex-start; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+.dossier-id-block { display:flex; gap:14px; align-items:center; }
+.dossier-avatar { width:52px; height:52px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Fraunces',serif; font-weight:600; font-size:17px; border:1.5px solid; flex-shrink:0; }
+.dossier-avatar.g-low  { background:#F4E3DC; color:var(--stamp-red); border-color:var(--stamp-red); }
+.dossier-avatar.g-med  { background:#F2E7CE; color:#7A5F22; border-color:var(--gold); }
+.dossier-avatar.g-high { background:#E4EADD; color:var(--green); border-color:var(--green); }
+.dossier-name { font-family:'Fraunces',serif; font-size:21px; font-weight:600; }
+.dossier-meta { font-size:12.5px; color:var(--ink-soft); margin-top:2px; }
+.dossier-protocollo { font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-faint); text-align:right; }
+.dossier-bio { padding:14px 26px; font-size:13px; color:var(--ink-soft); font-style:italic; background:var(--paper-deep); border-bottom:1px solid var(--rule); line-height:1.6; }
 
-/* ── condition tabs ──────────────────────────────────────── */
-.cond-tabs { display:flex; gap:0; border-bottom:2px solid var(--rule); margin-bottom:18px; flex-wrap:wrap; }
-.cond-tab {
-  padding:7px 16px; font-size:12px; font-weight:600; letter-spacing:.07em;
-  text-transform:uppercase; cursor:pointer; border-bottom:2px solid transparent;
-  margin-bottom:-2px; transition:all .15s; color:var(--ink-soft);
-  font-family:'IBM Plex Mono',monospace;
-}
-.cond-tab:hover { color:var(--ink); }
-.cond-tab.active { color:var(--seal-blue); border-bottom-color:var(--seal-blue); }
+.cond-strip { display:flex; gap:0; border-bottom:1px solid var(--rule); overflow-x:auto; }
+.cond-btn { font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:.03em; padding:12px 18px; border:none; background:transparent; color:var(--ink-faint); cursor:pointer; white-space:nowrap; border-bottom:2px solid transparent; border-right:1px solid var(--rule); }
+.cond-btn:hover { color:var(--ink-soft); }
+.cond-btn.active { color:var(--seal-blue); background:var(--paper-deep); border-bottom-color:var(--seal-blue); }
+.dossier-body { padding:24px 26px 28px; }
+.cond-label-row { display:flex; align-items:baseline; justify-content:space-between; margin-bottom:18px; flex-wrap:wrap; gap:8px; }
+.cond-label { font-family:'Fraunces',serif; font-size:16px; font-weight:600; }
+.cond-protocollo { font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-faint); }
+.section-label { font-family:'IBM Plex Mono',monospace; font-size:10.5px; text-transform:uppercase; letter-spacing:.09em; color:var(--ink-faint); margin-bottom:11px; margin-top:22px; }
+.section-label:first-child { margin-top:0; }
 
-/* ── condition content ───────────────────────────────────── */
-.cond-panel { display:none; }
-.cond-panel.active { display:block; }
+.comunicato-block { background:var(--card); border:1px solid var(--ink-faint); border-radius:3px; padding:14px 16px 16px; margin-bottom:4px; }
+.comunicato-stamp { display:inline-block; font-size:9.5px; text-transform:uppercase; letter-spacing:.08em; color:var(--seal-blue); border:1px solid var(--seal-blue); padding:2px 8px; border-radius:2px; margin-bottom:9px; font-family:'IBM Plex Mono',monospace; }
+.comunicato-text { font-family:'Fraunces',serif; font-size:14px; line-height:1.7; color:var(--ink); }
 
-/* ── section ─────────────────────────────────────────────── */
-.section { margin-bottom:18px; }
-.section-title {
-  font-size:10px; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
-  color:var(--ink-faint); border-bottom:1px solid var(--rule);
-  padding-bottom:5px; margin-bottom:12px;
-}
+.verbale-entry { margin-bottom:12px; display:flex; gap:12px; }
+.verbale-time { font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--ink-faint); width:80px; flex-shrink:0; padding-top:11px; text-align:right; }
+.verbale-text { flex:1; font-size:13.5px; line-height:1.65; color:var(--ink); background:var(--paper); border:1px solid var(--rule); border-radius:3px; padding:11px 14px; white-space:pre-wrap; }
+.verbale-empty { font-size:13px; color:var(--ink-faint); font-style:italic; padding:8px 0; }
 
-/* ── metrics grid ────────────────────────────────────────── */
-.metrics-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:10px; }
-.metric-card {
-  background:var(--card); border:1px solid var(--rule); border-radius:4px;
-  padding:12px 14px;
-}
-.metric-label { font-size:11px; color:var(--ink-faint); text-transform:uppercase; letter-spacing:.08em; margin-bottom:6px; }
-.metric-vals { display:flex; align-items:center; gap:10px; }
-.metric-val { font-size:22px; font-weight:700; font-family:'IBM Plex Mono',monospace; }
-.metric-arrow { font-size:16px; color:var(--ink-faint); }
-.metric-delta { font-size:13px; font-weight:600; font-family:'IBM Plex Mono',monospace; }
-.delta-pos { color:var(--green); }
-.delta-neg { color:var(--stamp-red); }
-.delta-zero { color:var(--ink-faint); }
+.measure-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+.measure-card { background:var(--paper); border:1px solid var(--rule); border-radius:3px; padding:12px; text-align:center; }
+.measure-label { font-size:10.5px; color:var(--ink-soft); margin-bottom:6px; text-transform:uppercase; letter-spacing:.04em; }
+.measure-vals { display:flex; align-items:baseline; justify-content:center; gap:5px; }
+.measure-num { font-family:'Fraunces',serif; font-size:21px; font-weight:600; }
+.measure-arrow { color:var(--ink-faint); font-size:13px; }
+.measure-delta { font-family:'IBM Plex Mono',monospace; font-size:11.5px; padding:1px 6px; border-radius:8px; margin-left:2px; }
+.measure-delta.pos  { background:#E4EADD; color:var(--green); }
+.measure-delta.neg  { background:#F4E3DC; color:var(--stamp-red); }
+.measure-delta.zero { background:var(--paper-deep); color:var(--ink-faint); }
 
-/* ── emotion & intention ─────────────────────────────────── */
-.ei-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
-.ei-card {
-  background:var(--card); border:1px solid var(--rule); border-radius:4px; padding:12px 14px;
-}
-.ei-label { font-size:11px; color:var(--ink-faint); text-transform:uppercase; letter-spacing:.08em; margin-bottom:6px; }
-.ei-vals { display:flex; flex-direction:column; gap:4px; }
-.ei-pre, .ei-post { font-size:13px; }
-.ei-pre  { color:var(--ink-soft); }
-.ei-post { font-weight:600; color:var(--ink); }
-.ei-badge {
-  display:inline-block; font-size:11px; padding:1px 7px; border-radius:10px; margin-right:4px;
-}
-.ei-phase { font-size:10px; font-weight:600; letter-spacing:.08em; color:var(--ink-faint); text-transform:uppercase; margin-right:4px; }
+.qualtag-row { display:flex; gap:10px; margin-top:10px; }
+.qualtag-card { flex:1; background:var(--paper); border:1px solid var(--rule); border-radius:3px; padding:11px 13px; }
+.qualtag-label { font-size:10.5px; color:var(--ink-soft); text-transform:uppercase; letter-spacing:.04em; margin-bottom:5px; }
+.qualtag-pre  { font-size:11px; color:var(--ink-faint); margin-bottom:3px; }
+.qualtag-val  { font-family:'Fraunces',serif; font-size:14px; font-weight:600; }
 
-/* ── reazioni ────────────────────────────────────────────── */
-.reactions-list { display:flex; flex-direction:column; gap:8px; }
-.reaction-item {
-  display:flex; gap:12px; padding:10px 14px;
-  background:var(--card); border:1px solid var(--rule); border-radius:3px;
-}
-.rx-step {
-  font-size:11px; font-weight:700; font-family:'IBM Plex Mono',monospace;
-  color:var(--seal-blue-lt); flex-shrink:0; min-width:26px; padding-top:1px;
-}
-.rx-text { font-size:13px; color:var(--ink-soft); line-height:1.55; }
+.motiv-block { margin-top:16px; background:var(--paper-deep); border-left:3px solid var(--seal-blue); border-radius:0 3px 3px 0; padding:13px 16px; font-size:13px; font-style:italic; color:var(--ink-soft); line-height:1.65; }
+.motiv-block .lbl { display:block; font-family:'IBM Plex Mono',monospace; font-size:10px; font-style:normal; text-transform:uppercase; letter-spacing:.06em; color:var(--seal-blue); margin-bottom:5px; }
 
-/* ── motivazione ─────────────────────────────────────────── */
-.motiv-box {
-  background:var(--card); border:1px solid var(--rule); border-left:3px solid var(--seal-blue);
-  border-radius:3px; padding:14px 18px;
-}
-.motiv-proto { font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--seal-blue-lt); margin-bottom:6px; }
-.motiv-text { font-size:14px; line-height:1.65; color:var(--ink); font-style:italic; }
+/* ── Scena III: Rendiconto ─────────────────────────────── */
+.report-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; margin-bottom:28px; }
+.report-card { background:var(--card); border:1px solid var(--rule); border-radius:5px; padding:18px 20px; margin-bottom:16px; }
+.report-card-title { font-family:'Fraunces',serif; font-size:14.5px; font-weight:600; margin-bottom:4px; }
+.report-card-sub   { font-size:11.5px; color:var(--ink-faint); margin-bottom:14px; }
+.bigstat { display:flex; align-items:baseline; gap:8px; margin-bottom:4px; }
+.bigstat .v { font-family:'Fraunces',serif; font-size:30px; font-weight:600; }
+.bigstat .u { font-size:12px; color:var(--ink-faint); }
+.bar-row { display:flex; align-items:center; gap:10px; margin-bottom:9px; }
+.bar-row .lbl { width:64px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-soft); flex-shrink:0; }
+.bar-track { flex:1; height:16px; background:var(--paper-deep); border-radius:2px; position:relative; overflow:hidden; }
+.bar-fill  { position:absolute; top:0; bottom:0; border-radius:2px; }
+.bar-fill.pos { background:var(--green); }
+.bar-fill.neg { background:var(--stamp-red); }
+.bar-val { font-family:'IBM Plex Mono',monospace; font-size:11px; width:48px; text-align:right; flex-shrink:0; }
+.criterion-row { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:11px 0; border-bottom:1px solid var(--rule); }
+.criterion-row:last-child { border-bottom:none; }
+.criterion-name { font-size:13px; font-weight:500; }
+.criterion-detail { font-size:11.5px; color:var(--ink-faint); margin-top:2px; }
+.criterion-verdict { font-family:'IBM Plex Mono',monospace; font-size:10.5px; text-transform:uppercase; letter-spacing:.04em; padding:3px 10px; border-radius:10px; flex-shrink:0; white-space:nowrap; }
+.criterion-verdict.ok    { background:#E4EADD; color:var(--green); }
+.criterion-verdict.watch { background:#F2E7CE; color:#7A5F22; }
+.group-table { width:100%; border-collapse:collapse; font-size:12.5px; }
+.group-table th { text-align:left; font-family:'IBM Plex Mono',monospace; font-size:10.5px; text-transform:uppercase; letter-spacing:.04em; color:var(--ink-faint); padding:6px 8px; border-bottom:1px solid var(--rule); }
+.group-table td { padding:7px 8px; border-bottom:1px solid var(--paper-deep); }
+.group-table td.num { font-family:'IBM Plex Mono',monospace; text-align:right; }
+.group-table td.num.pos { color:var(--green); }
+.group-table td.num.neg { color:var(--stamp-red); }
+.emo-pill-row { display:flex; flex-wrap:wrap; gap:6px; margin-top:6px; }
+.emo-pill { font-family:'IBM Plex Mono',monospace; font-size:10.5px; padding:4px 10px; border-radius:12px; background:var(--paper-deep); color:var(--ink-soft); }
+.footnote { font-size:11.5px; color:var(--ink-faint); margin-top:28px; padding-top:16px; border-top:1px solid var(--rule); line-height:1.7; }
 
-/* ── comunicazione ufficiale ─────────────────────────────── */
-.comm-box {
-  background:var(--card); border:1px solid var(--rule);
-  border-left:3px solid var(--rust); border-radius:3px; padding:14px 18px;
+@media(max-width:600px){
+  .lh-meta { text-align:left; }
+  .measure-grid { grid-template-columns:1fr; }
+  .qualtag-row { flex-direction:column; }
 }
-.comm-none { border-left-color:var(--rule); color:var(--ink-faint); font-style:italic; }
-.comm-header {
-  font-size:10px; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
-  color:var(--rust); margin-bottom:8px;
-}
-.comm-text { font-size:13.5px; line-height:1.7; color:var(--ink); }
-
-/* ── vuoto ───────────────────────────────────────────────── */
-.cond-missing { color:var(--ink-faint); font-style:italic; font-size:13px; padding:20px 0; }
-
-/* ── stamp ───────────────────────────────────────────────── */
-.stamp-row { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px; }
-.stamp {
-  font-family:'IBM Plex Mono',monospace; font-size:10px; font-weight:500;
-  border:1px solid currentColor; border-radius:2px; padding:2px 7px; opacity:.55;
-  letter-spacing:.04em;
-}
-.stamp-pos  { color:var(--green); }
-.stamp-neg  { color:var(--stamp-red); }
-.stamp-pla  { color:var(--ink-faint); }
-.stamp-ctrl { color:var(--ink-faint); }
-.stamp-pos2 { color:var(--seal-blue-lt); }
-.stamp-posw { color:var(--rust-soft); }
-
 </style>
 </head>
 <body>
+
+<!-- banner -->
+<div class="banner">
+  <span class="banner-pill">SIVE</span>
+  <span>
+    <strong>Synthetic Instrument Validation Experiment</strong>
+    &nbsp;·&nbsp;
+    120 LLM-driven synthetic citizens of a fictional Italian municipality react to official communications about water infrastructure.
+    &nbsp;·&nbsp;
+    <a href="README.md" target="_blank">About this experiment ↗</a>
+  </span>
+  <div class="banner-right">
+    <span class="banner-it">🇮🇹 Experiment conducted in Italian</span>
+    <span class="banner-pill" style="background:rgba(75,107,69,.5);border-color:rgba(75,107,69,.6);">DeepSeek · T=0.2</span>
+  </div>
+</div>
+
 <div class="shell">
 
-  <!-- letterhead -->
   <header class="lh">
     <div class="lh-top">
       <div class="crest">
@@ -274,355 +273,443 @@ body {
         </div>
         <div>
           <div class="eyebrow">Comune di Montelago</div>
-          <h1 class="fr">Albo Pretorio Digitale</h1>
+          <h1>Albo Pretorio Digitale</h1>
         </div>
       </div>
-      <div class="lh-meta mo">
+      <div class="lh-meta">
         Anagrafe della popolazione sintetica<br>
         Esperimento SIVE · deepseek-chat<br>
-        <span id="meta-n">—</span> cittadini · 6 condizioni
+        120 cittadini · 6 condizioni sperimentali
       </div>
     </div>
     <p class="lh-sub">
-      Montelago non esiste. I suoi 120 abitanti sono persone sintetiche generate
-      per studiare come cittadini con livelli di fiducia istituzionale diversi (LOW / MED / HIGH)
-      reagiscono alle comunicazioni ufficiali del proprio Comune — esperimento within-subjects su LLM.
+      Montelago non esiste. I suoi 120 abitanti sono persone sintetiche generate per studiare come
+      cittadini con storie e livelli di fiducia diversi reagiscono alle comunicazioni del proprio Comune —
+      un esperimento controllato (within-subjects) su un modello linguistico di grandi dimensioni.
     </p>
   </header>
 
-  <!-- toolbar -->
-  <div class="toolbar">
-    <label for="search">Cerca</label>
-    <input type="text" id="search" placeholder="nome, persona, occupazione…">
-    <label>Gruppo</label>
-    <div class="tag-group">
-      <span class="tag tag-all active" data-g="ALL">Tutti</span>
-      <span class="tag tag-low"  data-g="LOW">LOW</span>
-      <span class="tag tag-med"  data-g="MED">MED</span>
-      <span class="tag tag-high" data-g="HIGH">HIGH</span>
-    </div>
-    <label for="cond-filter">Condizione</label>
-    <select id="cond-filter">
-      <option value="">— tutte —</option>
-      <option value="POS">POS</option>
-      <option value="POS2">POS2</option>
-      <option value="POSW">POSW</option>
-      <option value="NEG">NEG</option>
-      <option value="PLA">PLA</option>
-      <option value="CTRL">CTRL</option>
-    </select>
-    <span id="count-badge" class="mo">— agenti</span>
-  </div>
+  <nav class="tabs">
+    <button class="tab-btn active" onclick="showScene('s-anagrafe',this)"><span class="num">I.</span>Anagrafe</button>
+    <button class="tab-btn" onclick="showScene('s-fascicolo',this)"><span class="num">II.</span>Fascicolo cittadino</button>
+    <button class="tab-btn" onclick="showScene('s-rendiconto',this)"><span class="num">III.</span>Rendiconto</button>
+  </nav>
 
-  <!-- layout -->
-  <div class="layout">
-    <div class="agent-list" id="agent-list"></div>
-    <div class="detail"   id="detail">
-      <div class="no-selection">
-        <span class="fr">Seleziona un cittadino</span>
-        Scegli un agente dalla lista per consultare il fascicolo.
+  <!-- ── Scena I ────────────────────────────────────────── -->
+  <section id="s-anagrafe" class="scene active">
+    <div class="anagrafe-toolbar">
+      <div class="search-box">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="9" r="5"/><path d="M14 14l3 3"/></svg>
+        <input type="text" id="search-input" placeholder="cerca nome, persona, occupazione…" oninput="renderGrid()">
       </div>
+      <button class="filter-chip on-all" data-g="all" onclick="setFilter('all',this)">Tutti</button>
+      <button class="filter-chip" data-g="LOW"  onclick="setFilter('LOW',this)">LOW</button>
+      <button class="filter-chip" data-g="MED"  onclick="setFilter('MED',this)">MED</button>
+      <button class="filter-chip" data-g="HIGH" onclick="setFilter('HIGH',this)">HIGH</button>
     </div>
-  </div>
+    <div class="result-count" id="result-count"></div>
+    <div class="grid" id="agent-grid"></div>
+  </section>
+
+  <!-- ── Scena II ───────────────────────────────────────── -->
+  <section id="s-fascicolo" class="scene">
+    <div class="fascicolo-layout">
+      <div class="roster">
+        <div class="roster-label">Cittadini registrati</div>
+        <div class="roster-search">
+          <input type="text" id="roster-search" placeholder="filtra per nome…" oninput="renderRoster()">
+        </div>
+        <div class="roster-list" id="roster-list"></div>
+      </div>
+      <div id="dossier-area"></div>
+    </div>
+  </section>
+
+  <!-- ── Scena III ──────────────────────────────────────── -->
+  <section id="s-rendiconto" class="scene">
+    <div id="rendiconto-area"></div>
+  </section>
 
 </div>
 
-<!-- dati agenti — includi agents_data.js nella stessa cartella -->
 <script src="agents_data.js"></script>
 <script>
 /* ============================================================
    MONTELAGO EXPLORER — logica UI
    ============================================================ */
 
-const COND_ORDER = ['POS','POS2','POSW','NEG','PLA','CTRL'];
-const COND_MSG = {
-  POS: "Il Comune di Montelago comunica che i lavori di sostituzione completa della rete idrica nel quartiere inizieranno lunedì prossimo. Il progetto, finanziato con fondi europei, prevede la posa di nuove tubature su tutti i tratti principali e si concluderà entro 60 giorni. La qualità dell'acqua sarà monitorata quotidianamente da tecnici certificati e i risultati saranno pubblicati ogni settimana sul sito del Comune. Eventuali interruzioni del servizio saranno comunicate con almeno 48 ore di anticipo. Il Comune garantisce un numero verde attivo h24 per segnalazioni e informazioni.",
+const COND_ORDER  = ['POS','POS2','POSW','NEG','PLA','CTRL'];
+const GROUP_LABEL = { LOW:'sfiduciati', MED:'pragmatici', HIGH:'fiduciosi' };
+const COND_LABELS = {
+  POS:  'Comunicazione positiva forte',
+  POS2: 'Replica rumore (noise floor)',
+  POSW: 'Positiva debole',
+  NEG:  'Comunicazione negativa',
+  PLA:  'Placebo inerte',
+  CTRL: 'Controllo — nessuno stimolo',
+};
+const COMUNICATI = {
+  POS:  "Il Comune di Montelago comunica che i lavori di sostituzione completa della rete idrica nel quartiere inizieranno lunedì prossimo. Il progetto, finanziato con fondi europei, prevede la posa di nuove tubature su tutti i tratti principali e si concluderà entro 60 giorni. La qualità dell'acqua sarà monitorata quotidianamente da tecnici certificati e i risultati saranno pubblicati ogni settimana sul sito del Comune. Eventuali interruzioni del servizio saranno comunicate con almeno 48 ore di anticipo. Il Comune garantisce un numero verde attivo h24 per segnalazioni e informazioni.",
   POS2: "Il Comune di Montelago comunica che i lavori di sostituzione completa della rete idrica nel quartiere inizieranno lunedì prossimo. Il progetto, finanziato con fondi europei, prevede la posa di nuove tubature su tutti i tratti principali e si concluderà entro 60 giorni. La qualità dell'acqua sarà monitorata quotidianamente da tecnici certificati e i risultati saranno pubblicati ogni settimana sul sito del Comune. Eventuali interruzioni del servizio saranno comunicate con almeno 48 ore di anticipo. Il Comune garantisce un numero verde attivo h24 per segnalazioni e informazioni.",
   POSW: "Il Comune di Montelago informa che sono in corso valutazioni tecniche per un possibile intervento di miglioramento della rete idrica nel quartiere. Non sono ancora disponibili tempistiche definite né dettagli sulle modalità di intervento. L'amministrazione comunale seguirà l'evoluzione della situazione e comunicherà eventuali aggiornamenti.",
   NEG:  "Il Comune di Montelago comunica che, a causa di ripetuti guasti alle tubature della rete idrica, si verificheranno interruzioni del servizio idrico nel quartiere per almeno i prossimi tre mesi. I lavori di riparazione non possono essere avviati prima dell'autunno per mancanza di fondi. Nelle ultime analisi, i valori di torbidità dell'acqua hanno superato i limiti consigliati in alcune vie della zona. Il Comune si scusa per i disagi.",
   PLA:  "Il Comune di Montelago comunica che sabato prossimo si terrà in Piazza Centrale la Festa del Quartiere, con mercatino dell'artigianato locale, musica dal vivo e attività per bambini. L'evento è organizzato in collaborazione con le associazioni di volontariato locali e avrà inizio alle ore 10:00. L'ingresso è libero e gratuito per tutti i cittadini.",
   CTRL: null,
 };
+const TIME_MARKERS = ['Prima reazione','Dopo riflessione','A fine giornata'];
 
-const COND_DESC = {
-  POS:  'Comunicazione positiva forte',
-  POS2: 'Replica rumore (noise floor)',
-  POSW: 'Positiva debole',
-  NEG:  'Comunicazione negativa',
-  PLA:  'Placebo inerte',
-  CTRL: 'Controllo (nessun stimolo)',
-};
-const COND_STAMP = {
-  POS:'stamp-pos', POS2:'stamp-pos2', POSW:'stamp-posw',
-  NEG:'stamp-neg', PLA:'stamp-pla', CTRL:'stamp-ctrl'
-};
+let currentFilter = 'all';
+let selAgentId    = null;
+let selCond       = 'POS';
 
-const NUMERIC_ITEMS = ['fiducia_istituzione','credibilita','adeguatezza_info'];
-const ITEM_LABEL = {
-  fiducia_istituzione: 'Fiducia istituzione',
-  credibilita:         'Credibilità',
-  adeguatezza_info:    'Adeguatezza info',
-};
-const EMOZIONI_ICON = {
-  rabbia:'😠', preoccupazione:'😟', speranza:'🌱',
-  sollievo:'😌', indifferenza:'😑', '':'—'
-};
-
-// ── stato ────────────────────────────────────────────────────
-let filterGroup  = 'ALL';
-let filterCond   = '';
-let filterSearch = '';
-let activeId     = null;
-let activeCond   = null;
-
-// ── lista ─────────────────────────────────────────────────────
-function initCountBadge(){
-  document.getElementById('meta-n').textContent = AGENTS.length;
+function gClass(g) { return 'g-' + g.toLowerCase(); }
+function initials(n) { return n.trim().split(' ').slice(0,2).map(p=>p[0].toUpperCase()).join(''); }
+function matchesSearch(a, q) {
+  if (!q) return true;
+  const s = q.toLowerCase();
+  return (a.name+a.persona+a.occ+a.bio).toLowerCase().includes(s);
 }
+function protocolNumber(id, cond) { return `Prot. N. ${String(id).padStart(5,'0')}/${cond}/2026`; }
+function esc(s) { return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function deltaClass(v) { return v>0?'pos':v<0?'neg':'zero'; }
+function deltaStr(v)   { return v>0?'+'+v:v===0?'=':''+v; }
 
-function filteredAgents(){
-  return AGENTS.filter(a => {
-    if (filterGroup !== 'ALL' && a.gruppo !== filterGroup) return false;
-    if (filterCond && !a.data[filterCond]) return false;
-    if (filterSearch){
-      const q = filterSearch.toLowerCase();
-      return (a.name+a.persona+a.occ+a.bio).toLowerCase().includes(q);
-    }
-    return true;
+// ── Scena I ─────────────────────────────────────────────────
+function setFilter(g, btn) {
+  currentFilter = g;
+  document.querySelectorAll('.filter-chip').forEach(b => {
+    b.className = 'filter-chip' + (b.dataset.g==='all'?' on-all':'');
   });
+  btn.className = 'filter-chip on-' + (g==='all'?'all':g.toLowerCase());
+  renderGrid();
 }
 
-function initials(name){
-  return name.trim().split(' ').slice(0,2).map(p=>p[0].toUpperCase()).join('');
+function renderGrid() {
+  const q = document.getElementById('search-input').value;
+  const list = AGENTS.filter(a =>
+    (currentFilter==='all' || a.gruppo===currentFilter) && matchesSearch(a,q)
+  );
+  document.getElementById('result-count').textContent =
+    `${list.length} di ${AGENTS.length} cittadini registrati`;
+  document.getElementById('agent-grid').innerHTML = list.map(a => `
+    <div class="citizen-card ${gClass(a.gruppo)}" onclick="openFascicolo(${a.id})">
+      <div class="card-top">
+        <span class="card-id">#${String(a.id).padStart(3,'0')}</span>
+        <span class="card-tag ${gClass(a.gruppo)}">${GROUP_LABEL[a.gruppo]}</span>
+      </div>
+      <div class="card-name">${esc(a.name)}</div>
+      <div class="card-meta">${a.age} anni · ${esc(a.occ)}</div>
+      <div class="card-quote">«${esc(a.quote||'—')}»</div>
+    </div>
+  `).join('') || `<div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--ink-faint);">Nessun cittadino corrisponde alla ricerca.</div>`;
 }
 
-function renderList(){
-  const list = document.getElementById('agent-list');
-  const agents = filteredAgents();
-  document.getElementById('count-badge').textContent = agents.length + ' agenti';
+function openFascicolo(id) {
+  selAgentId = id;
+  const a = AGENTS.find(x=>x.id===id);
+  selCond = COND_ORDER.find(c=>a.data[c]) || Object.keys(a.data)[0];
+  document.querySelectorAll('.tab-btn').forEach((b,i)=>b.classList.toggle('active',i===1));
+  document.getElementById('s-anagrafe').classList.remove('active');
+  document.getElementById('s-rendiconto').classList.remove('active');
+  document.getElementById('s-fascicolo').classList.add('active');
+  renderRoster();
+  renderDossier();
+}
 
-  if (!agents.length){
-    list.innerHTML = '<div style="padding:20px 14px;color:var(--ink-faint);font-size:13px;font-style:italic;">Nessun agente corrisponde ai filtri.</div>';
-    return;
+// ── Scena II ────────────────────────────────────────────────
+function renderRoster() {
+  const q = (document.getElementById('roster-search').value||'').toLowerCase();
+  const list = AGENTS.filter(a=>!q||a.name.toLowerCase().includes(q)||a.occ.toLowerCase().includes(q));
+  document.getElementById('roster-list').innerHTML = list.map(a=>`
+    <div class="roster-item ${a.id===selAgentId?'sel':''}" onclick="selectInRoster(${a.id})">
+      <span class="roster-dot ${gClass(a.gruppo)}"></span>
+      <div>
+        <div class="roster-item-name">${esc(a.name)}</div>
+        <div class="roster-item-occ">${esc(a.occ)}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function selectInRoster(id) {
+  selAgentId = id;
+  const a = AGENTS.find(x=>x.id===id);
+  selCond = COND_ORDER.find(c=>a.data[c]) || Object.keys(a.data)[0];
+  renderRoster();
+  renderDossier();
+}
+
+function renderDossier() {
+  const a = AGENTS.find(x=>x.id===selAgentId);
+  const area = document.getElementById('dossier-area');
+  if (!a) { area.innerHTML=''; return; }
+
+  const availConds = COND_ORDER.filter(c=>a.data[c]);
+  const d = a.data[selCond];
+
+  const condTabs = availConds.map(c=>`
+    <button class="cond-btn ${c===selCond?'active':''}" onclick="selCond='${c}';renderDossier();">${c}</button>
+  `).join('');
+
+  // comunicato
+  const comTxt = COMUNICATI[selCond];
+  const comunicatoHtml = comTxt
+    ? `<div class="comunicato-block">
+         <div class="comunicato-stamp">Comunicato ufficiale</div>
+         <div class="comunicato-text">${esc(comTxt)}</div>
+       </div>`
+    : `<div class="verbale-empty">Nessun comunicato inviato — condizione di controllo, misura il livello di base senza stimolo.</div>`;
+
+  // reazioni
+  let reazioniHtml = `<div class="verbale-empty">Nessuna reazione registrata.</div>`;
+  if (d.reazioni && d.reazioni.length) {
+    reazioniHtml = d.reazioni.map((r,i)=>`
+      <div class="verbale-entry">
+        <div class="verbale-time">${TIME_MARKERS[i]||('passo '+(i+1))}</div>
+        <div class="verbale-text">${esc(r)}</div>
+      </div>`).join('');
   }
 
-  // raggruppa per gruppo
-  const groups = {};
-  agents.forEach(a => {
-    if (!groups[a.gruppo]) groups[a.gruppo] = [];
-    groups[a.gruppo].push(a);
-  });
+  // misurazioni numeriche
+  const items = [
+    {key:'fiducia_istituzione', label:'Fiducia'},
+    {key:'credibilita',         label:'Credibilità'},
+    {key:'adeguatezza_info',    label:'Info adeguata'},
+  ];
+  const measureHtml = items.map(it=>{
+    const pre=d.pre[it.key], post=d.post[it.key];
+    if (pre==null||post==null) return `<div class="measure-card"><div class="measure-label">${it.label}</div><div class="measure-vals">—</div></div>`;
+    const delta=post-pre;
+    return `<div class="measure-card">
+      <div class="measure-label">${it.label}</div>
+      <div class="measure-vals">
+        <span class="measure-num">${pre}</span>
+        <span class="measure-arrow">→</span>
+        <span class="measure-num">${post}</span>
+        <span class="measure-delta ${deltaClass(delta)}">${deltaStr(delta)}</span>
+      </div></div>`;
+  }).join('');
 
-  let html = '';
-  ['LOW','MED','HIGH'].forEach(g => {
-    if (!groups[g]) return;
-    html += `<div class="al-group-header">${g} · ${groups[g].length}</div>`;
-    groups[g].forEach(a => {
-      const active = a.id === activeId ? ' active' : '';
-      html += `
-        <div class="al-item${active}" data-id="${a.id}">
-          <div class="al-avatar av-${a.gruppo}">${initials(a.name)}</div>
+  // emozione e intenzione PRE→POST
+  const emoPre  = d.pre.emozione   || '—';
+  const emoPost = d.post.emozione  || '—';
+  const intPre  = d.pre.intenzione  || '—';
+  const intPost = d.post.intenzione || '—';
+
+  area.innerHTML = `
+    <div class="dossier">
+      <div class="dossier-header">
+        <div class="dossier-id-block">
+          <div class="dossier-avatar ${gClass(a.gruppo)}">${initials(a.name)}</div>
           <div>
-            <div class="al-name">${a.name}</div>
-            <div class="al-sub mo">${a.age}a · ${a.occ.slice(0,26)}</div>
+            <div class="dossier-name">${esc(a.name)}</div>
+            <div class="dossier-meta">${a.age} anni · ${esc(a.occ)} · <em>${esc(a.persona)}</em></div>
           </div>
-        </div>`;
-    });
-  });
-  list.innerHTML = html;
-
-  list.querySelectorAll('.al-item').forEach(el => {
-    el.addEventListener('click', () => {
-      const id = +el.dataset.id;
-      selectAgent(id);
-    });
-  });
-}
-
-// ── selezione agente ──────────────────────────────────────────
-function selectAgent(id){
-  activeId = id;
-  const agent = AGENTS.find(a => a.id === id);
-  if (!agent) return;
-
-  // tab di default: prima condizione disponibile (rispettando filterCond)
-  const conds = COND_ORDER.filter(c => agent.data[c]);
-  if (filterCond && agent.data[filterCond]) activeCond = filterCond;
-  else if (!activeCond || !agent.data[activeCond]) activeCond = conds[0] || null;
-
-  renderList();
-  renderDetail(agent);
-
-  // scroll
-  const el = document.querySelector('.al-item.active');
-  if (el) el.scrollIntoView({ block:'nearest' });
-}
-
-// ── detail ─────────────────────────────────────────────────────
-function renderDetail(agent){
-  const panel = document.getElementById('detail');
-  const conds  = COND_ORDER.filter(c => agent.data[c]);
-
-  // header
-  let html = `
-    <div class="card-header">
-      <div class="ch-avatar av-${agent.gruppo}">${initials(agent.name)}</div>
-      <div style="flex:1;min-width:0">
-        <div class="ch-name fr">${agent.name}</div>
-        <div class="ch-sub">${agent.age} anni · ${agent.gender === 'M' ? '♂' : '♀'} · ${agent.occ}</div>
-        <div class="ch-tags">
-          <span class="chip chip-${agent.gruppo}">${agent.gruppo}</span>
-          <span class="chip chip-persona">${agent.persona}</span>
         </div>
-        <div class="ch-bio">${agent.bio}</div>
+        <div class="dossier-protocollo">
+          Fascicolo cittadino #${String(a.id).padStart(3,'0')}<br>
+          Gruppo: ${GROUP_LABEL[a.gruppo]}
+        </div>
+      </div>
+      <div class="dossier-bio">«${esc(a.bio)}»</div>
+      <div class="cond-strip">${condTabs}</div>
+      <div class="dossier-body">
+        <div class="cond-label-row">
+          <div class="cond-label">${COND_LABELS[selCond]||selCond}</div>
+          <div class="cond-protocollo">${protocolNumber(a.id,selCond)}</div>
+        </div>
+
+        <div class="section-label">Il comunicato</div>
+        ${comunicatoHtml}
+
+        <div class="section-label">Come ha vissuto la comunicazione</div>
+        ${reazioniHtml}
+
+        <div class="section-label">Misurazioni — prima e dopo</div>
+        <div class="measure-grid">${measureHtml}</div>
+
+        <div class="qualtag-row">
+          <div class="qualtag-card">
+            <div class="qualtag-label">Emozione</div>
+            <div class="qualtag-pre">PRE: ${esc(emoPre)}</div>
+            <div class="qualtag-val">POST: ${esc(emoPost)}</div>
+          </div>
+          <div class="qualtag-card">
+            <div class="qualtag-label">Intenzione comportamentale</div>
+            <div class="qualtag-pre">PRE: ${esc(intPre)}</div>
+            <div class="qualtag-val">POST: ${esc(intPost)}</div>
+          </div>
+        </div>
+
+        ${d.motiv?`<div class="motiv-block"><span class="lbl">Motivazione, nelle sue parole</span>«${esc(d.motiv)}»</div>`:''}
       </div>
     </div>`;
+}
 
-  // stamp condizioni
-  html += `<div class="stamp-row">`;
-  conds.forEach(c => {
-    html += `<span class="stamp ${COND_STAMP[c]}">${c}</span>`;
-  });
-  html += `</div>`;
+// ── Scena III ───────────────────────────────────────────────
+function barRow(label, val, maxAbs) {
+  const pct = Math.min(100, Math.abs(val)/maxAbs*100);
+  const cls = val>=0?'pos':'neg';
+  const left = val>=0?'50%':((50-pct/2)+'%');
+  const width = (pct/2)+'%';
+  return `<div class="bar-row">
+    <div class="lbl">${label}</div>
+    <div class="bar-track"><div class="bar-fill ${cls}" style="left:${left};width:${width};"></div></div>
+    <div class="bar-val">${val>0?'+':''}${val.toFixed(2)}</div>
+  </div>`;
+}
 
-  // tabs
-  html += `<div class="cond-tabs">`;
-  conds.forEach(c => {
-    const active = c === activeCond ? ' active' : '';
-    html += `<div class="cond-tab${active}" data-cond="${c}">${c}</div>`;
-  });
-  html += `</div>`;
+function renderRendiconto() {
+  const area = document.getElementById('rendiconto-area');
 
-  // panels
-  conds.forEach(c => {
-    const d = agent.data[c];
-    const active = c === activeCond ? ' active' : '';
-    html += `<div class="cond-panel${active}" data-panel="${c}">`;
-    html += `<div style="font-size:12px;color:var(--ink-faint);margin-bottom:14px;font-style:italic">${COND_DESC[c] || c}</div>`;
+  // calcola statistiche al volo dagli AGENTS
+  const groups = ['LOW','MED','HIGH'];
+  const items3 = ['fiducia_istituzione','credibilita','adeguatezza_info'];
 
-    // comunicazione ufficiale
-    const msg = COND_MSG[c];
-    if (msg){
-      html += `<div class="section"><div class="section-title">Comunicazione ricevuta</div>
-        <div class="comm-box"><div class="comm-header mo">📋 Comunicato Ufficiale — Comune di Montelago</div>
-        <div class="comm-text">${esc(msg)}</div></div></div>`;
-    } else {
-      html += `<div class="section"><div class="section-title">Comunicazione ricevuta</div>
-        <div class="comm-box comm-none"><em>Nessuna comunicazione (condizione di controllo)</em></div></div>`;
-    }
-
-    // metriche numeriche
-    const numItems = NUMERIC_ITEMS.filter(k => d.pre[k] !== undefined || d.post[k] !== undefined);
-    if (numItems.length){
-      html += `<div class="section"><div class="section-title">Misurazioni PRE → POST</div><div class="metrics-grid">`;
-      numItems.forEach(k => {
-        const pre  = d.pre[k]  ?? '—';
-        const post = d.post[k] ?? '—';
-        const delta = (typeof pre === 'number' && typeof post === 'number') ? post - pre : null;
-        let dClass = 'delta-zero', dSign = '';
-        if (delta !== null){
-          if (delta > 0){ dClass = 'delta-pos'; dSign = '+'; }
-          else if (delta < 0){ dClass = 'delta-neg'; }
-        }
-        html += `
-          <div class="metric-card">
-            <div class="metric-label">${ITEM_LABEL[k] || k}</div>
-            <div class="metric-vals">
-              <span class="metric-val">${pre}</span>
-              <span class="metric-arrow">→</span>
-              <span class="metric-val">${post}</span>
-              ${delta !== null ? `<span class="metric-delta ${dClass}">${dSign}${delta}</span>` : ''}
-            </div>
-          </div>`;
-      });
-      html += `</div></div>`;
-    }
-
-    // emozione e intenzione
-    const emozioniPre  = d.pre['emozione']   || '';
-    const emozioniPost = d.post['emozione']  || '';
-    const intPre       = d.pre['intenzione']  || '';
-    const intPost      = d.post['intenzione'] || '';
-    if (emozioniPre || emozioniPost || intPre || intPost){
-      html += `<div class="section"><div class="section-title">Emozione e Intenzione</div><div class="ei-grid">`;
-
-      // emozione
-      html += `<div class="ei-card"><div class="ei-label">Emozione</div><div class="ei-vals">`;
-      html += `<div class="ei-pre"><span class="ei-phase">PRE</span>${EMOZIONI_ICON[emozioniPre] || ''} ${emozioniPre || '—'}</div>`;
-      html += `<div class="ei-post"><span class="ei-phase">POST</span>${EMOZIONI_ICON[emozioniPost] || ''} ${emozioniPost || '—'}</div>`;
-      html += `</div></div>`;
-
-      // intenzione
-      html += `<div class="ei-card"><div class="ei-label">Intenzione</div><div class="ei-vals">`;
-      html += `<div class="ei-pre"><span class="ei-phase">PRE</span>${intPre || '—'}</div>`;
-      html += `<div class="ei-post"><span class="ei-phase">POST</span><strong>${intPost || '—'}</strong></div>`;
-      html += `</div></div>`;
-
-      html += `</div></div>`;
-    }
-
-    // reazioni
-    if (d.reazioni && d.reazioni.length){
-      html += `<div class="section"><div class="section-title">Reazioni (${d.reazioni.length} step)</div><div class="reactions-list">`;
-      d.reazioni.forEach((r, i) => {
-        html += `<div class="reaction-item"><span class="rx-step mo">${String(i+1).padStart(2,'0')}</span><span class="rx-text">${esc(r)}</span></div>`;
-      });
-      html += `</div></div>`;
-    }
-
-    // motivazione libera
-    if (d.motiv){
-      html += `<div class="section"><div class="section-title">Motivazione libera (POST)</div>
-        <div class="motiv-box">
-          <div class="motiv-proto mo">Prot. N. ${String(agent.id).padStart(5,'0')}/${c}/2026</div>
-          <div class="motiv-text">${esc(d.motiv)}</div>
-        </div></div>`;
-    }
-
-    html += `</div>`; // fine cond-panel
+  // medie PRE per gruppo (C1 fidelity proxy)
+  const preByGroup = {};
+  groups.forEach(g=>{
+    const ag = AGENTS.filter(a=>a.gruppo===g);
+    const vals = ag.map(a=>{
+      const d = Object.values(a.data)[0];
+      return d && d.pre && d.pre.fiducia_istituzione != null ? d.pre.fiducia_istituzione : null;
+    }).filter(v=>v!==null);
+    preByGroup[g] = vals.length ? (vals.reduce((s,v)=>s+v,0)/vals.length).toFixed(2) : '—';
   });
 
-  panel.innerHTML = html;
-
-  // tab click
-  panel.querySelectorAll('.cond-tab').forEach(tab => {
-    tab.addEventListener('click', () => {
-      activeCond = tab.dataset.cond;
-      panel.querySelectorAll('.cond-tab').forEach(t => t.classList.toggle('active', t.dataset.cond === activeCond));
-      panel.querySelectorAll('.cond-panel').forEach(p => p.classList.toggle('active', p.dataset.panel === activeCond));
+  // delta per condizione e gruppo
+  const deltaTable = {};
+  COND_ORDER.forEach(c=>{
+    deltaTable[c]={ALL:0,LOW:0,MED:0,HIGH:0,n:{ALL:0,LOW:0,MED:0,HIGH:0}};
+    AGENTS.forEach(a=>{
+      const d = a.data[c];
+      if (!d||d.pre.fiducia_istituzione==null||d.post.fiducia_istituzione==null) return;
+      const delta = d.post.fiducia_istituzione - d.pre.fiducia_istituzione;
+      deltaTable[c].ALL += delta; deltaTable[c].n.ALL++;
+      deltaTable[c][a.gruppo] += delta; deltaTable[c].n[a.gruppo]++;
+    });
+    ['ALL','LOW','MED','HIGH'].forEach(k=>{
+      const n=deltaTable[c].n[k];
+      deltaTable[c][k] = n ? +(deltaTable[c][k]/n).toFixed(2) : 0;
     });
   });
-}
 
-function esc(s){
-  if (!s) return '';
-  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-}
-
-// ── filtri ────────────────────────────────────────────────────
-document.querySelectorAll('.tag').forEach(tag => {
-  tag.addEventListener('click', () => {
-    document.querySelectorAll('.tag').forEach(t => t.classList.remove('active'));
-    tag.classList.add('active');
-    filterGroup = tag.dataset.g;
-    renderList();
+  // emozioni PRE per gruppo (condizione POS come riferimento baseline)
+  const emoDist = {};
+  groups.forEach(g=>{
+    emoDist[g]={};
+    AGENTS.filter(a=>a.gruppo===g).forEach(a=>{
+      const d=a.data['POS']||a.data['CTRL']||Object.values(a.data)[0];
+      if (d && d.pre.emozione) {
+        emoDist[g][d.pre.emozione]=(emoDist[g][d.pre.emozione]||0)+1;
+      }
+    });
   });
-});
 
-document.getElementById('cond-filter').addEventListener('change', e => {
-  filterCond = e.target.value;
-  renderList();
-});
+  const maxAbs = Math.max(...COND_ORDER.map(c=>Math.abs(deltaTable[c].ALL)))*1.2||1;
+  const condBars = COND_ORDER.map(c=>barRow(c, deltaTable[c].ALL, maxAbs)).join('');
 
-document.getElementById('search').addEventListener('input', e => {
-  filterSearch = e.target.value.trim();
-  renderList();
-});
+  const groupRows = COND_ORDER.map(c=>{
+    const row=deltaTable[c];
+    const cc=v=>v>0?'pos':v<0?'neg':'';
+    return `<tr>
+      <td style="font-family:'IBM Plex Mono',monospace">${c}</td>
+      <td class="num ${cc(row.LOW)}">${row.LOW>0?'+':''}${row.LOW}</td>
+      <td class="num ${cc(row.MED)}">${row.MED>0?'+':''}${row.MED}</td>
+      <td class="num ${cc(row.HIGH)}">${row.HIGH>0?'+':''}${row.HIGH}</td>
+    </tr>`;
+  }).join('');
 
-// ── init ──────────────────────────────────────────────────────
-initCountBadge();
-renderList();
-if (AGENTS.length) selectAgent(AGENTS[0].id);
+  const emoHtml = groups.map(g=>{
+    const dist=emoDist[g]||{};
+    const total=Object.values(dist).reduce((a,b)=>a+b,0)||1;
+    const pills=Object.entries(dist).sort((a,b)=>b[1]-a[1])
+      .map(([e,n])=>`<span class="emo-pill">${e} · ${Math.round(n/total*100)}%</span>`).join('');
+    return `<div style="margin-bottom:14px;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-soft);margin-bottom:4px;">${GROUP_LABEL[g]} (${g})</div>
+      <div class="emo-pill-row">${pills||'—'}</div></div>`;
+  }).join('');
+
+  // controlli di validazione
+  const posNeg = Math.abs(deltaTable.POS.ALL - deltaTable.NEG.ALL);
+  const plaCtr = Math.abs(deltaTable.PLA.ALL - deltaTable.CTRL.ALL);
+  const noiseFloor = Math.abs(deltaTable.POS.ALL - deltaTable.POS2.ALL);
+  const fidelityOk = parseFloat(preByGroup.LOW)<parseFloat(preByGroup.MED)&&parseFloat(preByGroup.MED)<parseFloat(preByGroup.HIGH);
+
+  area.innerHTML = `
+    <div class="report-grid">
+      <div class="report-card">
+        <div class="report-card-title">Composizione del campione</div>
+        <div class="report-card-sub">Fiducia istituzionale PRE, media per gruppo</div>
+        <table class="group-table">
+          <tr><th>Gruppo</th><th>Etichetta</th><th style="text-align:right">Media PRE</th></tr>
+          <tr><td>LOW</td><td>sfiduciati</td><td class="num">${preByGroup.LOW}</td></tr>
+          <tr><td>MED</td><td>pragmatici</td><td class="num">${preByGroup.MED}</td></tr>
+          <tr><td>HIGH</td><td>fiduciosi</td><td class="num">${preByGroup.HIGH}</td></tr>
+        </table>
+      </div>
+      <div class="report-card">
+        <div class="report-card-title">Controlli di validazione</div>
+        <div class="report-card-sub">Criteri SIVE su questo run</div>
+        <div class="criterion-row">
+          <div><div class="criterion-name">C1 — Fedeltà dei profili</div><div class="criterion-detail">LOW &lt; MED &lt; HIGH nel PRE</div></div>
+          ${fidelityOk?'<span class="criterion-verdict ok">confermato</span>':'<span class="criterion-verdict watch">da verificare</span>'}
+        </div>
+        <div class="criterion-row">
+          <div><div class="criterion-name">C3 — Noise floor (POS vs POS2)</div><div class="criterion-detail">Δ atteso ≈ 0 per replica identica</div></div>
+          <span class="criterion-verdict ${noiseFloor<0.5?'ok':'watch'}">Δ=${noiseFloor.toFixed(2)}</span>
+        </div>
+        <div class="criterion-row">
+          <div><div class="criterion-name">C4 — Specificità (PLA vs CTRL)</div><div class="criterion-detail">Δ atteso ≈ 0 per placebo</div></div>
+          <span class="criterion-verdict ${plaCtr<0.5?'ok':'watch'}">Δ=${plaCtr.toFixed(2)}</span>
+        </div>
+        <div class="criterion-row">
+          <div><div class="criterion-name">C5 — Sensibilità (POS vs NEG)</div><div class="criterion-detail">Δ atteso &gt; noise floor</div></div>
+          <span class="criterion-verdict ${posNeg>1.0?'ok':'watch'}">Δ=${posNeg.toFixed(2)}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="report-card">
+      <div class="report-card-title">Variazione media della fiducia, per condizione</div>
+      <div class="report-card-sub">Δ (POST − PRE) su scala 1–10, media su 120 cittadini</div>
+      ${condBars}
+    </div>
+
+    <div class="report-card">
+      <div class="report-card-title">Variazione della fiducia per gruppo</div>
+      <div class="report-card-sub">Stesso Δ, scomposto per livello di fiducia di partenza</div>
+      <table class="group-table">
+        <tr><th>Condizione</th><th style="text-align:right">LOW</th><th style="text-align:right">MED</th><th style="text-align:right">HIGH</th></tr>
+        ${groupRows}
+      </table>
+    </div>
+
+    <div class="report-card">
+      <div class="report-card-title">Emozioni dichiarate al PRE</div>
+      <div class="report-card-sub">Distribuzione per gruppo (condizione POS come riferimento)</div>
+      ${emoHtml}
+    </div>
+
+    <p class="footnote">
+      I dati in questa pagina sono calcolati in tempo reale dagli AGENTS caricati nel browser.
+      Montelago è una popolazione sintetica — nessun dato proviene da persone reali.
+      Esperimento SIVE · Università di Bologna · deepseek/deepseek-chat T=0.2
+    </p>`;
+}
+
+// ── navigazione ──────────────────────────────────────────────
+function showScene(id, btn) {
+  document.querySelectorAll('.scene').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  if (id==='s-fascicolo' && !selAgentId) renderRoster();
+  if (id==='s-rendiconto') renderRendiconto();
+}
+
+// ── init ────────────────────────────────────────────────────
+renderGrid();
 </script>
 </body>
 </html>
