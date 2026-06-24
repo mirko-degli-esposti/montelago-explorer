@@ -1,3 +1,4 @@
+![Montelago Explorer](banner.png)
 # Montelago Explorer
 
 **An interactive browser for a synthetic population experiment on institutional trust.**
