@@ -1,0 +1,2162 @@
+[
+  {
+    "id": 1,
+    "name": "Marco Rossi",
+    "gender": "M",
+    "age": 42,
+    "education": "diploma superiore",
+    "occupation": "operaio metalmeccanico",
+    "marriage_status": "coniugato",
+    "persona": "sfiduciato critico",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 1,
+      "credibilita": 2,
+      "adeguatezza_info": 1
+    },
+    "background_story": "Vivo a Montelago da quindici anni e ho imparato a non aspettarmi nulla dal Comune. Tre anni fa ho fatto richiesta per una licenza edilizia per ampliare il garage: dopo diciotto mesi di attesa e una montagna di documenti, me l'hanno respinta per un cavillo burocratico. Le strade del mio quartiere sono piene di buche da anni, nonostante le continue segnalazioni. Ormai penso che le istituzioni locali esistano solo per complicare la vita ai cittadini onesti."
+  },
+  {
+    "id": 2,
+    "name": "Giulia Bianchi",
+    "gender": "F",
+    "age": 55,
+    "education": "licenza media",
+    "occupation": "commessa",
+    "marriage_status": "separata",
+    "persona": "delusa amareggiata",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 2,
+      "credibilita": 1,
+      "adeguatezza_info": 2
+    },
+    "background_story": "Sono nata qui a Montelago ma negli ultimi anni la citta' e' peggiorata tantissimo. Ho segnalato piu' volte i problemi di illuminazione nella via dove abito, ma nessuno si e' mai fatto vivo. Quando sono andata in Comune per questioni di divorzio, mi hanno rimbalzata da un ufficio all'altro per settimane. I servizi pubblici funzionano male e i dipendenti comunali sembrano infastiditi quando chiedi aiuto."
+  },
+  {
+    "id": 3,
+    "name": "Roberto Verdi",
+    "gender": "M",
+    "age": 38,
+    "education": "laurea triennale",
+    "occupation": "tecnico informatico",
+    "marriage_status": "celibe",
+    "persona": "scettico metodico",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 3,
+      "credibilita": 2,
+      "adeguatezza_info": 3
+    },
+    "background_story": "Lavoro nel settore tecnologico e vedo quanto sia indietro il Comune di Montelago. Il sito web e' un disastro, i servizi online non funzionano mai, e quando vai agli sportelli ti dicono sempre che il sistema e' in tilt. Ho provato piu' volte a segnalare problemi tecnici ma non ascoltano mai i suggerimenti dei cittadini. L'amministrazione e' ferma agli anni Novanta mentre il mondo va avanti."
+  },
+  {
+    "id": 4,
+    "name": "Anna Ferrari",
+    "gender": "F",
+    "age": 63,
+    "education": "licenza elementare",
+    "occupation": "pensionata",
+    "marriage_status": "vedova",
+    "persona": "diffidente risentita",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 1,
+      "credibilita": 1,
+      "adeguatezza_info": 2
+    },
+    "background_story": "Abito a Montelago da tutta la vita e ho visto come sono cambiate le cose in peggio. Mio marito prima di morire aveva fatto richiesta per l'abbattimento delle barriere architettoniche nel nostro condominio: sono passati cinque anni e non si e' mosso nessuno. Al mercato settimanale non c'e' mai controllo, i venditori abusivi fanno quello che vogliono. Quando chiami il Comune per lamentarti, ti rispondono sempre che non e' di loro competenza."
+  },
+  {
+    "id": 5,
+    "name": "Stefano Galli",
+    "gender": "M",
+    "age": 49,
+    "education": "diploma superiore",
+    "occupation": "autista autobus",
+    "marriage_status": "coniugato",
+    "persona": "frustrato diretto",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 2,
+      "credibilita": 3,
+      "adeguatezza_info": 1
+    },
+    "background_story": "Guido gli autobus in citta' e vedo ogni giorno i problemi che il Comune non risolve mai. Le fermate sono tutte sgangherate, la segnaletica stradale e' un disastro, e quando segnaliamo problemi di viabilita' ci ignorano completamente. L'anno scorso hanno promesso nuove pensiline alle fermate: ne hanno messe due su venti e hanno abbandonato il progetto. Le promesse elettorali durano giusto il tempo delle elezioni, poi se ne dimenticano tutti."
+  },
+  {
+    "id": 6,
+    "name": "Francesca Romano",
+    "gender": "F",
+    "age": 31,
+    "education": "laurea magistrale",
+    "occupation": "insegnante",
+    "marriage_status": "nubile",
+    "persona": "critica determinata",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 3,
+      "credibilita": 2,
+      "adeguatezza_info": 3
+    },
+    "background_story": "Insegno alle scuole medie di Montelago e vedo quotidianamente l'inefficienza dell'amministrazione comunale. Le scuole cadono a pezzi, manca la manutenzione ordinaria, e quando facciamo richieste per riparazioni urgenti passano mesi prima di vedere qualcuno. Ho partecipato a diverse riunioni del consiglio comunale ma e' tutto teatro: decidono tutto prima e i cittadini servono solo per fare scena. La trasparenza e' solo una parola vuota nei loro discorsi."
+  },
+  {
+    "id": 7,
+    "name": "Giuseppe Conti",
+    "gender": "M",
+    "age": 67,
+    "education": "licenza media",
+    "occupation": "pensionato",
+    "marriage_status": "coniugato",
+    "persona": "scontento tradizionalista",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 1,
+      "credibilita": 2,
+      "adeguatezza_info": 1
+    },
+    "background_story": "Sono nato e cresciuto a Montelago, ma questa non e' piu' la citta' che conoscevo. Una volta le cose funzionavano, ora e' tutto un disastro burocratico. Per rinnovare la carta d'identita' ho dovuto prendere tre giorni di ferie quando lavoravo ancora, tra code e uffici che chiudevano in continuazione. Il verde pubblico e' abbandonato, i parchi sono sporchi e nessuno se ne occupa. I politici locali pensano solo alle loro poltrone, non ai problemi veri della gente."
+  },
+  {
+    "id": 8,
+    "name": "Elena Martini",
+    "gender": "F",
+    "age": 44,
+    "education": "diploma superiore",
+    "occupation": "parrucchiera",
+    "marriage_status": "coniugata",
+    "persona": "lamentosa realista",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 2,
+      "credibilita": 1,
+      "adeguatezza_info": 2
+    },
+    "background_story": "Ho aperto il mio salone di parrucchiera qui a Montelago dieci anni fa e da allora e' stata una lotta continua con la burocrazia comunale. Ogni pratica diventa un'odissea, tra documenti che spariscono e uffici che ti rimandano da una parte all'altra. Il parcheggio davanti al negozio e' sempre occupato abusivamente ma la polizia municipale non fa mai i controlli. Quando organizziamo le feste di quartiere, il Comune promette sempre supporto ma poi ci lascia sempre soli."
+  },
+  {
+    "id": 9,
+    "name": "Paolo Ricci",
+    "gender": "M",
+    "age": 58,
+    "education": "licenza media",
+    "occupation": "muratore",
+    "marriage_status": "separato",
+    "persona": "cinico pragmatico",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 1,
+      "credibilita": 1,
+      "adeguatezza_info": 1
+    },
+    "background_story": "Faccio il muratore da trent'anni a Montelago e ho lavorato anche per il Comune in passato. Ho visto come sprecano i soldi pubblici, sempre gli stessi appalti agli stessi amici, mentre i lavori veri non li fanno mai. Quando ho fatto domanda per un alloggio popolare, dopo due anni di attesa mi hanno detto che non avevo i requisiti, ma non mi hanno mai spiegato perche'. Le graduatorie sono un mistero e i criteri li cambiano quando gli conviene."
+  },
+  {
+    "id": 10,
+    "name": "Carla Lombardi",
+    "gender": "F",
+    "age": 36,
+    "education": "laurea triennale",
+    "occupation": "impiegata",
+    "marriage_status": "nubile",
+    "persona": "indignata attivista",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 2,
+      "credibilita": 2,
+      "adeguatezza_info": 2
+    },
+    "background_story": "Lavoro in banca ma nel tempo libero mi occupo di volontariato ambientale a Montelago. Ho organizzato diverse iniziative per la pulizia dei parchi pubblici, ma il Comune non ci ha mai dato il minimo supporto logistico. Anzi, quando abbiamo segnalato discariche abusive ci hanno detto di rivolgerci alla Provincia. Fanno sempre scaricabarile, nessuno si prende mai le responsabilita'. Le loro campagne di comunicazione sono solo propaganda vuota, nei fatti non cambiano mai niente."
+  },
+  {
+    "id": 11,
+    "name": "Davide Moretti",
+    "gender": "M",
+    "age": 52,
+    "education": "diploma superiore",
+    "occupation": "meccanico",
+    "marriage_status": "coniugato",
+    "persona": "arrabbiato disiluso",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 3,
+      "credibilita": 3,
+      "adeguatezza_info": 2
+    },
+    "background_story": "Ho l'officina qui a Montelago da quindici anni e ho sempre pagato tutto regolarmente, dalle tasse comunali alle licenze. Ma quando ho avuto bisogno di ampliare il locale per assumere un dipendente, mi hanno fatto girare per due anni tra uffici tecnici e commissioni edilizie. Alla fine ho dovuto rinunciare e il ragazzo ha trovato lavoro altrove. Il Comune parla sempre di sviluppo economico ma poi mette i bastoni tra le ruote a chi vuole investire davvero."
+  },
+  {
+    "id": 12,
+    "name": "Silvia Grassi",
+    "gender": "F",
+    "age": 29,
+    "education": "laurea magistrale",
+    "occupation": "architetto",
+    "marriage_status": "coniugata",
+    "persona": "professionale delusa",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 1,
+      "credibilita": 2,
+      "adeguatezza_info": 3
+    },
+    "background_story": "Sono architetto e collaboro spesso con privati che devono fare pratiche edilizie a Montelago. E' incredibile quanto sia inefficiente l'ufficio tecnico comunale: normative cambiate in continuazione, interpretazioni diverse della stessa legge a seconda dell'impiegato che ti capita. Ho visto progetti fermi per mesi per cavilli assurdi mentre costruzioni abusive vengono ignorate per anni. La pianificazione urbana e' inesistente, autorizzano qualsiasi cosa senza logica. Come professionista e' frustrante lavorare in questo contesto."
+  },
+  {
+    "id": 13,
+    "name": "Antonio Pellegrini",
+    "gender": "M",
+    "age": 71,
+    "education": "licenza elementare",
+    "occupation": "pensionato",
+    "marriage_status": "vedovo",
+    "persona": "rassegnato critico",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 2,
+      "credibilita": 1,
+      "adeguatezza_info": 1
+    },
+    "background_story": "Vivo a Montelago da sempre, ho visto passare tanti sindaci ma i problemi rimangono sempre gli stessi. La strada dove abito e' dissestata da vent'anni, ogni inverno si allaga il sottopasso della stazione e nessuno fa niente. Quando ero piu' giovane credevo che votare servisse a qualcosa, ora so che cambiano le facce ma la sostanza resta uguale. Gli uffici comunali sono pieni di gente che fa il minimo indispensabile, tanto lo stipendio arriva lo stesso."
+  },
+  {
+    "id": 14,
+    "name": "Monica Betti",
+    "gender": "F",
+    "age": 41,
+    "education": "diploma superiore",
+    "occupation": "cameriera",
+    "marriage_status": "separata",
+    "persona": "stanca diffidente",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 2,
+      "credibilita": 2,
+      "adeguatezza_info": 2
+    },
+    "background_story": "Lavoro in un ristorante del centro di Montelago e vivo in una casa popolare in periferia. Per ottenere l'assegnazione dell'alloggio ho aspettato quattro anni, sempre con scuse diverse ogni volta che andavo a chiedere informazioni. Ora che ci vivo, le riparazioni non le fanno mai: l'ascensore e' rotto da sei mesi e abito al quinto piano. Quando chiami l'ufficio casa ti dicono sempre che manderanno qualcuno, ma nessuno si fa mai vedere."
+  },
+  {
+    "id": 15,
+    "name": "Luca Santini",
+    "gender": "M",
+    "age": 34,
+    "education": "laurea triennale",
+    "occupation": "giornalista freelance",
+    "marriage_status": "celibe",
+    "persona": "investigativo scettico",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 1,
+      "credibilita": 1,
+      "adeguatezza_info": 2
+    },
+    "background_story": "Faccio il giornalista freelance e spesso scrivo di questioni locali per Montelago. Ho imparato che ottenere informazioni dal Comune e' quasi impossibile: rispondono sempre con frasi fatte o ti rimandano a uffici inesistenti. Ho fatto diverse richieste di accesso agli atti pubblici ma me le hanno sempre respinte con scuse burocratiche. La trasparenza amministrativa qui e' solo uno slogan elettorale. Quando ho provato a seguire l'iter di alcuni appalti pubblici, mi hanno fatto capire chiaramente che non ero il benvenuto."
+  },
+  {
+    "id": 16,
+    "name": "Patrizia Colombo",
+    "gender": "F",
+    "age": 60,
+    "education": "licenza media",
+    "occupation": "addetta alle pulizie",
+    "marriage_status": "coniugata",
+    "persona": "sottomessa sfiduciata",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 3,
+      "credibilita": 2,
+      "adeguatezza_info": 3
+    },
+    "background_story": "Faccio le pulizie negli uffici pubblici di Montelago da dieci anni e vedo come lavorano dall'interno. Molti dipendenti arrivano tardi, se ne vanno presto e nel frattempo leggono il giornale o navigano su internet. I cittadini aspettano ore agli sportelli mentre gli impiegati chattano tra loro. Ho visto pratiche importanti lasciate per mesi sui tavoli senza che nessuno se ne occupasse. Quando ho provato a segnalare cose che non andavano, mi hanno fatto capire che devo stare zitta se voglio tenere il lavoro."
+  },
+  {
+    "id": 17,
+    "name": "Massimo De Sanctis",
+    "gender": "M",
+    "age": 46,
+    "education": "diploma superiore",
+    "occupation": "rappresentante commerciale",
+    "marriage_status": "coniugato",
+    "persona": "pragmatico sfiduciato",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 2,
+      "credibilita": 3,
+      "adeguatezza_info": 1
+    },
+    "background_story": "Viaggio molto per lavoro ma vivo a Montelago con la famiglia da dodici anni. Ogni volta che torno dalle trasferte vedo che i problemi della citta' sono sempre li: buche nelle strade, semafori rotti, marciapiedi sconnessi. Il confronto con altre citta' che visito e' impietoso, qui sembra che il tempo si sia fermato. Ho provato a partecipare alle riunioni di quartiere ma e' sempre la solita solfa: tante belle parole e promesse che puntualmente vengono dimenticate. Ormai ho smesso di perdere tempo, penso solo ai fatti miei."
+  },
+  {
+    "id": 18,
+    "name": "Claudia Fabbri",
+    "gender": "F",
+    "age": 53,
+    "education": "licenza media",
+    "occupation": "operaia",
+    "marriage_status": "coniugata",
+    "persona": "concreta disillusa",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 1,
+      "credibilita": 1,
+      "adeguatezza_info": 2
+    },
+    "background_story": "Lavoro in una fabbrica alla periferia di Montelago e abito in zona industriale. La strada che percorro ogni giorno per andare al lavoro e' un disastro: rattoppi su rattoppi, nessuna manutenzione seria da anni. Ho fatto parte del comitato di quartiere per chiedere migliorie ma il Comune ci ha sempre preso in giro con promesse mai mantenute. L'illuminazione pubblica funziona a singhiozzo, l'inverno scorso siamo stati al buio per settimane. Quando vai a protestare ti dicono che i fondi non ci sono, ma poi li trovi sempre per le feste in piazza del sindaco."
+  },
+  {
+    "id": 19,
+    "name": "Emilio Tognetti",
+    "gender": "M",
+    "age": 27,
+    "education": "laurea triennale",
+    "occupation": "programmatore",
+    "marriage_status": "celibe",
+    "persona": "giovane disincantato",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 3,
+      "credibilita": 2,
+      "adeguatezza_info": 3
+    },
+    "background_story": "Sono cresciuto a Montelago e dopo l'universita' sono tornato a vivere qui, ma sto gia' pensando di andarmene. Il Comune e' fermo al medioevo digitale: per qualsiasi pratica devi ancora andare di persona, fare code infinite e riempire moduli cartacei assurdi. Ho proposto di fare volontariato per migliorare i loro sistemi informatici ma non sono neanche riuscito a parlare con qualcuno che capisca di cosa stavo parlando. Per i giovani qui non c'e' futuro, l'amministrazione pensa solo agli anziani che votano sempre gli stessi."
+  },
+  {
+    "id": 20,
+    "name": "Rosanna Giuliani",
+    "gender": "F",
+    "age": 48,
+    "education": "licenza elementare",
+    "occupation": "badante",
+    "marriage_status": "vedova",
+    "persona": "rassegnata amareggiata",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 2,
+      "credibilita": 1,
+      "adeguatezza_info": 1
+    },
+    "background_story": "Faccio la badante qui a Montelago e assisto anziani che hanno sempre gli stessi problemi con il Comune. Barriere architettoniche ovunque, servizi sociali che non rispondono mai al telefono, pratiche per l'invalidita' che si perdono nei meandri degli uffici. Ho accompagnato tante volte i miei assistiti agli sportelli comunali e ho visto quanto poco rispetto c'e' per le persone fragili. Gli impiegati trattano male gli anziani, parlano sopra di loro come se non esistessero. Dopo la morte di mio marito ho dovuto fare io stessa molte pratiche e ho capito che se non hai qualcuno che ti aiuta, qui sei perso."
+  },
+  {
+    "id": 21,
+    "name": "Marco Benedetti",
+    "gender": "M",
+    "age": 42,
+    "education": "diploma superiore",
+    "occupation": "operaio metalmeccanico",
+    "marriage_status": "coniugato",
+    "persona": "diffidente critico",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 1,
+      "credibilita": 2,
+      "adeguatezza_info": 1
+    },
+    "background_story": "Vivo a Montelago da quindici anni e ho imparato a non aspettarmi nulla dal Comune. Tre anni fa ho fatto richiesta per il permesso di ristrutturare il garage e dopo otto mesi di attesa mi hanno respinto la pratica per un cavillo burocratico. Le strade del mio quartiere sono piene di buche da anni e nonostante le promesse elettorali non e' mai stato fatto nulla. Ormai considero le istituzioni locali come un ostacolo piu' che un aiuto."
+  },
+  {
+    "id": 22,
+    "name": "Giulia Rossini",
+    "gender": "F",
+    "age": 35,
+    "education": "laurea magistrale",
+    "occupation": "architetto libero professionista",
+    "marriage_status": "separata",
+    "persona": "scettica determinata",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 2,
+      "credibilita": 1,
+      "adeguatezza_info": 2
+    },
+    "background_story": "Sono nata qui e ho visto Montelago cambiare in peggio negli ultimi vent'anni. Come professionista ho dovuto confrontarmi spesso con l'ufficio tecnico comunale e ogni volta e' stata una battaglia estenuante. I tempi di risposta sono biblici e spesso le comunicazioni sono contraddittorie. Ho perso fiducia nelle promesse del sindaco dopo che il piano di riqualificazione del centro storico e' rimasto sulla carta per tre mandati consecutivi."
+  },
+  {
+    "id": 23,
+    "name": "Roberto Fanelli",
+    "gender": "M",
+    "age": 58,
+    "education": "licenza media",
+    "occupation": "pensionato ex muratore",
+    "marriage_status": "vedovo",
+    "persona": "amareggiato solitario",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 3,
+      "credibilita": 2,
+      "adeguatezza_info": 2
+    },
+    "background_story": "Ho sempre pagato le tasse e rispettato le regole ma il Comune mi ha sempre trattato come un numero. Quando mia moglie si ammalo' ho chiesto aiuto per i servizi sociali e mi hanno fatto girare da un ufficio all'altro per mesi. Dopo quarant'anni di residenza qui mi sento ancora uno straniero quando devo fare qualsiasi pratica. Le promesse elettorali sono sempre le stesse da vent'anni ma i problemi restano tutti al loro posto."
+  },
+  {
+    "id": 24,
+    "name": "Stefania Lombardi",
+    "gender": "F",
+    "age": 29,
+    "education": "laurea triennale",
+    "occupation": "impiegata banca",
+    "marriage_status": "celibe/nubile",
+    "persona": "delusa pragmatica",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 1,
+      "credibilita": 1,
+      "adeguatezza_info": 3
+    },
+    "background_story": "Sono cresciuta qui e avevo grandi aspettative per il futuro di Montelago ma mi sono dovuta ricredere. L'anno scorso ho partecipato a un incontro pubblico sui trasporti e le proposte dei cittadini sono state completamente ignorate. Gli uffici comunali hanno orari impossibili per chi lavora e quando finalmente riesci ad andarci ti trattano con sufficienza. Sto seriamente pensando di trasferirmi in un comune piu' efficiente dove i servizi funzionano davvero."
+  },
+  {
+    "id": 25,
+    "name": "Antonio Greco",
+    "gender": "M",
+    "age": 67,
+    "education": "licenza elementare",
+    "occupation": "pensionato ex agricoltore",
+    "marriage_status": "coniugato",
+    "persona": "sfiduciato tradizionale",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 2,
+      "credibilita": 3,
+      "adeguatezza_info": 1
+    },
+    "background_story": "Ho vissuto tutta la vita a Montelago e ho visto passare tanti sindaci ma niente e' mai cambiato veramente. Ogni volta promettono di sistemare la viabilita' rurale ma le strade che portano ai campi sono ancora sterrate e impraticabili quando piove. Mi hanno fatto aspettare due anni per un allacciamento elettrico e alla fine ho dovuto pagare tutto di tasca mia. Ormai non vado piu' nemmeno a votare perche' tanto e' tutto inutile."
+  },
+  {
+    "id": 26,
+    "name": "Francesca Moretti",
+    "gender": "F",
+    "age": 44,
+    "education": "diploma superiore",
+    "occupation": "commerciante",
+    "marriage_status": "coniugata",
+    "persona": "frustrata combattiva",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 1,
+      "credibilita": 2,
+      "adeguatezza_info": 2
+    },
+    "background_story": "Gestisco un negozio nel centro di Montelago e devo confrontarmi continuamente con la burocrazia comunale che e' un incubo. Per rinnovare una semplice licenza commerciale ci vogliono mesi e spesso ti chiedono documenti diversi ogni volta che vai. Le tasse locali aumentano sempre ma i servizi peggiorano e il centro storico e' sempre piu' deserto. Ho scritto diverse lettere al sindaco per proporre iniziative ma non ho mai ricevuto nemmeno una risposta di cortesia."
+  },
+  {
+    "id": 27,
+    "name": "Giuseppe Ricci",
+    "gender": "M",
+    "age": 51,
+    "education": "laurea triennale",
+    "occupation": "insegnante scuola media",
+    "marriage_status": "separato",
+    "persona": "cinico rassegnato",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 3,
+      "credibilita": 2,
+      "adeguatezza_info": 3
+    },
+    "background_story": "Insegno a Montelago da vent'anni e ho visto come l'amministrazione tratta la scuola pubblica con totale disinteresse. Gli edifici scolastici cadono a pezzi e ogni richiesta di manutenzione viene rimandata a tempi migliori che non arrivano mai. Durante le elezioni tutti promettono investimenti nell'istruzione ma poi i fondi finiscono sempre altrove. Ormai ho capito che bisogna arrangiarsi da soli e non aspettarsi nulla dalle istituzioni locali."
+  },
+  {
+    "id": 28,
+    "name": "Maria Conti",
+    "gender": "F",
+    "age": 72,
+    "education": "licenza media",
+    "occupation": "pensionata ex operaia",
+    "marriage_status": "vedova",
+    "persona": "delusa stoica",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 2,
+      "credibilita": 1,
+      "adeguatezza_info": 2
+    },
+    "background_story": "Abito nel quartiere popolare di Montelago da cinquant'anni e ho visto solo promesse mai mantenute. I servizi sociali per gli anziani sono inesistenti e quando ho chiesto aiuto per mio marito malato mi hanno dato solo moduli da compilare. Le pensioni minime come la mia non interessano a nessuno in Comune e i problemi del nostro quartiere vengono sempre ignorati. Dopo una vita di lavoro e tasse pagate meriterei piu' rispetto e attenzione."
+  },
+  {
+    "id": 29,
+    "name": "Davide Pellegrini",
+    "gender": "M",
+    "age": 38,
+    "education": "laurea magistrale",
+    "occupation": "ingegnere informatico",
+    "marriage_status": "coniugato",
+    "persona": "critico razionale",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 1,
+      "credibilita": 2,
+      "adeguatezza_info": 1
+    },
+    "background_story": "Sono arrivato a Montelago per lavoro cinque anni fa e sono rimasto colpito dall'inefficienza dell'amministrazione locale. Il sito web del Comune e' preistórico e per qualsiasi pratica devi ancora andare fisicamente negli uffici con pile di carte. Ho provato a proporre soluzioni digitali moderne ma mi hanno risposto che non ci sono fondi ne' competenze. E' incredibile come in un'epoca di innovazione tecnologica qui si viva ancora negli anni Ottanta."
+  },
+  {
+    "id": 30,
+    "name": "Paola Marchetti",
+    "gender": "F",
+    "age": 33,
+    "education": "diploma superiore",
+    "occupation": "parrucchiera",
+    "marriage_status": "coniugata",
+    "persona": "scontenta diretta",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 2,
+      "credibilita": 3,
+      "adeguatezza_info": 2
+    },
+    "background_story": "Lavoro in centro a Montelago e vedo ogni giorno quanto sia trascurato e mal gestito. I parcheggi sono un disastro e i clienti si lamentano sempre di non trovare posto. Ho chiesto al Comune di installare piu' strisce blu ma dopo due anni di attesa mi hanno detto che il progetto e' stato rinviato. Le tasse sulla pubblicita' del mio negozio aumentano ogni anno ma non vedo miglioramenti nei servizi. Mi sembra di buttare i soldi."
+  },
+  {
+    "id": 31,
+    "name": "Luca Santini",
+    "gender": "M",
+    "age": 46,
+    "education": "licenza media",
+    "occupation": "autista autobus",
+    "marriage_status": "separato",
+    "persona": "scettico diretto",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 3,
+      "credibilita": 2,
+      "adeguatezza_info": 3
+    },
+    "background_story": "Guido autobus urbani a Montelago da quindici anni e conosco ogni buca e ogni problema della citta'. Ho segnalato centinaia di volte le condizioni disastrose di certe strade ma non e' mai stato fatto nulla di concreto. Durante gli scioperi per il rinnovo del contratto l'amministrazione ci ha sempre ignorato e trattato come un fastidio. Ormai ho perso le speranze che qualcosa possa migliorare e faccio il mio lavoro aspettando la pensione."
+  },
+  {
+    "id": 32,
+    "name": "Elena Bianchi",
+    "gender": "F",
+    "age": 27,
+    "education": "laurea triennale",
+    "occupation": "grafica freelance",
+    "marriage_status": "celibe/nubile",
+    "persona": "delusa creativa",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 1,
+      "credibilita": 1,
+      "adeguatezza_info": 1
+    },
+    "background_story": "Sono tornata a vivere a Montelago dopo l'università sperando di contribuire alla crescita culturale della citta' ma mi sono scontrata con un muro di burocrazia e disinteresse. Ho proposto progetti per valorizzare i giovani artisti locali ma non sono mai riuscita nemmeno a parlare con l'assessore competente. Gli spazi pubblici sono abbandonati e non c'e' nessuna visione per il futuro. Sto gia' pensando di andarmene di nuovo perche' qui non c'e' spazio per le idee innovative."
+  },
+  {
+    "id": 33,
+    "name": "Claudio Ferrari",
+    "gender": "M",
+    "age": 63,
+    "education": "diploma superiore",
+    "occupation": "pensionato ex vigile urbano",
+    "marriage_status": "coniugato",
+    "persona": "disilluso esperto",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 2,
+      "credibilita": 2,
+      "adeguatezza_info": 2
+    },
+    "background_story": "Ho lavorato come vigile urbano a Montelago per trent'anni e ho visto dall'interno come funziona davvero l'amministrazione. Le decisioni vengono prese senza consultare chi conosce i problemi reali della citta' e spesso prevalgono interessi di parte. Durante il mio servizio ho scritto decine di relazioni sui problemi del traffico e della sosta ma sono finite tutte nel cassetto. Ora che sono in pensione vedo che niente e' cambiato e anzi molte situazioni sono peggiorate."
+  },
+  {
+    "id": 34,
+    "name": "Simona Galli",
+    "gender": "F",
+    "age": 41,
+    "education": "laurea magistrale",
+    "occupation": "avvocato",
+    "marriage_status": "coniugata",
+    "persona": "critica professionale",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 2,
+      "credibilita": 3,
+      "adeguatezza_info": 1
+    },
+    "background_story": "Come legale ho spesso rapporti professionali con gli uffici comunali di Montelago e devo dire che l'esperienza e' sempre frustrante. I tempi per ottenere certificati e documenti sono lunghissimi e spesso devi rifare le richieste perche' si perdono le pratiche. L'ufficio legale comunale e' sottodimensionato e incompetente e questo rallenta tutti i processi amministrativi. Per i miei clienti devo sempre mettere in conto tempi doppi rispetto ad altri comuni vicini."
+  },
+  {
+    "id": 35,
+    "name": "Michele Russo",
+    "gender": "M",
+    "age": 55,
+    "education": "licenza elementare",
+    "occupation": "operaio edile",
+    "marriage_status": "vedovo",
+    "persona": "sfiduciato pratico",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 1,
+      "credibilita": 2,
+      "adeguatezza_info": 2
+    },
+    "background_story": "Lavoro nell'edilizia a Montelago da trent'anni e ho visto come l'amministrazione ostacola piu' che aiutare chi vuole costruire onestamente. Per ogni cantiere e' una lotta continua con l'ufficio tecnico che cambia le regole in corsa e pretende sempre nuovi documenti. Ho dovuto chiudere la mia piccola impresa anche per colpa della burocrazia comunale che rende tutto impossibile. Adesso lavoro come dipendente e spero solo che nessuno mi chieda piu' di avere rapporti con il Comune."
+  },
+  {
+    "id": 36,
+    "name": "Cristina Mancini",
+    "gender": "F",
+    "age": 48,
+    "education": "diploma superiore",
+    "occupation": "infermiera ospedale",
+    "marriage_status": "separata",
+    "persona": "stanca realista",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 3,
+      "credibilita": 2,
+      "adeguatezza_info": 3
+    },
+    "background_story": "Lavoro nel settore sanitario e vedo ogni giorno quanto poco il Comune di Montelago investa nella prevenzione e nei servizi sociosanitari. Abbiamo proposto diverse volte progetti di educazione sanitaria nelle scuole ma ci hanno sempre risposto che non ci sono fondi. I consultori pubblici sono sottodimensionati e i cittadini sono costretti a rivolgersi al privato per tutto. E' scoraggiante vedere come la salute pubblica non sia una priorita' per chi ci governa."
+  },
+  {
+    "id": 37,
+    "name": "Andrea Colombo",
+    "gender": "M",
+    "age": 31,
+    "education": "laurea triennale",
+    "occupation": "cameriere",
+    "marriage_status": "celibe/nubile",
+    "persona": "deluso ironico",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 1,
+      "credibilita": 1,
+      "adeguatezza_info": 2
+    },
+    "background_story": "Sono nato a Montelago e ci sono rimasto per inerzia ma ogni anno che passa mi pento di piu' di questa scelta. Il Comune non fa niente per incentivare le attivita' giovanili e il divertimento notturno e' praticamente inesistente. Ho provato a organizzare eventi culturali ma tra permessi impossibili da ottenere e tasse esose ho sempre dovuto rinunciare. I giovani scappano tutti verso le citta' piu' grandi e non li biasimo perche' qui non c'e' futuro."
+  },
+  {
+    "id": 38,
+    "name": "Patrizia Ferri",
+    "gender": "F",
+    "age": 59,
+    "education": "licenza media",
+    "occupation": "collaboratrice domestica",
+    "marriage_status": "coniugata",
+    "persona": "rassegnata paziente",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 2,
+      "credibilita": 1,
+      "adeguatezza_info": 1
+    },
+    "background_story": "Vivo in periferia a Montelago e il nostro quartiere e' completamente dimenticato dall'amministrazione comunale. Le strade sono piene di buche, l'illuminazione pubblica funziona a meta' e il trasporto pubblico e' inesistente. Abbiamo fatto diverse petizioni negli anni ma non e' mai cambiato nulla di sostanziale. Ormai ci siamo abituati a vivere come cittadini di serie B e non speriamo piu' in nessun miglioramento. Paghiamo le tasse come tutti ma non vediamo mai i servizi."
+  },
+  {
+    "id": 39,
+    "name": "Fabio Esposito",
+    "gender": "M",
+    "age": 43,
+    "education": "laurea magistrale",
+    "occupation": "farmacista",
+    "marriage_status": "coniugato",
+    "persona": "scettico metodico",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 3,
+      "credibilita": 3,
+      "adeguatezza_info": 2
+    },
+    "background_story": "Gestisco una farmacia nel centro di Montelago e devo interfacciarmi spesso con gli uffici comunali per questioni sanitarie e commerciali. L'inefficienza e' sistematica: perdono documentazione, danno informazioni sbagliate e i tempi di risposta sono vergognosi. Ho partecipato a diverse riunioni con i commercianti per proporre soluzioni ma le nostre richieste vengono sempre rinviate a commissioni che non si riuniscono mai. E' impossibile fare impresa seriamente con un'amministrazione cosi' disorganizzata."
+  },
+  {
+    "id": 40,
+    "name": "Valeria Rizzo",
+    "gender": "F",
+    "age": 37,
+    "education": "diploma superiore",
+    "occupation": "segretaria studio medico",
+    "marriage_status": "coniugata",
+    "persona": "frustrata precisa",
+    "gruppo": "LOW",
+    "T_latent": 2,
+    "attitudini": {
+      "fiducia_istituzione": 1,
+      "credibilita": 2,
+      "adeguatezza_info": 1
+    },
+    "background_story": "Lavoro in un ambulatorio medico a Montelago e vedo continuamente i disagi che i cittadini devono affrontare per ottenere certificati e documenti sanitari dal Comune. Gli orari degli uffici sono incompatibili con le esigenze lavorative e spesso le persone devono prendere permessi solo per fare una pratica semplice. Ho segnalato piu' volte questi problemi ma mi hanno risposto che non possono fare diversamente. E' assurdo che nel 2025 non si riesca a modernizzare un servizio cosi' basilare."
+  },
+  {
+    "id": 41,
+    "name": "Marco Benedetti",
+    "gender": "M",
+    "age": 34,
+    "education": "diploma superiore",
+    "occupation": "tecnico informatico",
+    "marriage_status": "coniugato",
+    "persona": "pragmatico riflessivo",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 5,
+      "credibilita": 5,
+      "adeguatezza_info": 4
+    },
+    "background_story": "Vivo a Montelago da dieci anni e ho avuto esperienze alterne con il Comune. Alcune pratiche sono andate lisce, altre hanno richiesto mesi di attesa. Gli uffici a volte sono efficienti, altre volte sembrano bloccati dalla burocrazia. Nel complesso non mi lamento, ma nemmeno mi entusiasmo per l'amministrazione locale."
+  },
+  {
+    "id": 42,
+    "name": "Giulia Rossi",
+    "gender": "F",
+    "age": 52,
+    "education": "laurea triennale",
+    "occupation": "impiegata comunale",
+    "marriage_status": "separata",
+    "persona": "equilibrata diplomatica",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 6,
+      "credibilita": 6,
+      "adeguatezza_info": 5
+    },
+    "background_story": "Lavoro negli uffici comunali da vent'anni e conosco bene pregi e difetti del sistema. Vedo ogni giorno quanto impegno ci mettono i colleghi, ma anche le limitazioni burocratiche che rallentano tutto. Come cittadina apprezzo gli sforzi dell'amministrazione, pur sapendo che c'e' sempre margine di miglioramento."
+  },
+  {
+    "id": 43,
+    "name": "Roberto Fantini",
+    "gender": "M",
+    "age": 67,
+    "education": "licenza media",
+    "occupation": "pensionato",
+    "marriage_status": "vedovo",
+    "persona": "cauto osservatore",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 4,
+      "credibilita": 4,
+      "adeguatezza_info": 5
+    },
+    "background_story": "Sono nato a Montelago e ho visto cambiare tante amministrazioni. Alcune sono state migliori, altre peggiori. Quella attuale fa il suo lavoro senza infamia e senza lode. Ho imparato che non bisogna aspettarsi miracoli, ma nemmeno accettare tutto passivamente. Seguo le questioni cittadine con interesse moderato."
+  },
+  {
+    "id": 44,
+    "name": "Elena Marchetti",
+    "gender": "F",
+    "age": 29,
+    "education": "laurea magistrale",
+    "occupation": "architetto libero professionista",
+    "marriage_status": "celibe",
+    "persona": "critica costruttiva",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 5,
+      "credibilita": 4,
+      "adeguatezza_info": 5
+    },
+    "background_story": "Mi sono trasferita a Montelago per lavoro tre anni fa. Ho presentato alcuni progetti edilizi e l'iter e' stato abbastanza regolare, anche se lungo. L'ufficio tecnico e' competente ma a volte troppo rigido. Partecipo saltuariamente ai consigli comunali aperti perche' credo nell'importanza del dialogo tra cittadini e istituzioni."
+  },
+  {
+    "id": 45,
+    "name": "Alessandro Conti",
+    "gender": "M",
+    "age": 41,
+    "education": "diploma superiore",
+    "occupation": "operaio metalmeccanico",
+    "marriage_status": "coniugato",
+    "persona": "schietto realista",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 4,
+      "credibilita": 5,
+      "adeguatezza_info": 4
+    },
+    "background_story": "Abito in periferia da sempre e il rapporto col Comune e' quello tipico: paghi le tasse e speri che i servizi funzionino. Qualche volta ho dovuto sollecitare per la raccolta rifiuti o per le buche, con risultati alterni. Non ho grandi pretese ma nemmeno grande fiducia cieca nell'amministrazione."
+  },
+  {
+    "id": 46,
+    "name": "Francesca Bianchi",
+    "gender": "F",
+    "age": 38,
+    "education": "laurea triennale",
+    "occupation": "insegnante scuola primaria",
+    "marriage_status": "coniugata",
+    "persona": "attenta paziente",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 6,
+      "credibilita": 5,
+      "adeguatezza_info": 6
+    },
+    "background_story": "Insegno nella scuola del centro e collaboro spesso con l'assessorato all'istruzione per progetti didattici. L'amministrazione e' disponibile ma a volte mancano i fondi per realizzare tutto quello che si programma. Apprezzo lo sforzo di coinvolgere le scuole nelle attivita' cittadine, anche se i tempi burocratici sono sempre lunghi."
+  },
+  {
+    "id": 47,
+    "name": "Davide Moretti",
+    "gender": "M",
+    "age": 56,
+    "education": "laurea magistrale",
+    "occupation": "medico di base",
+    "marriage_status": "coniugato",
+    "persona": "metodico prudente",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 5,
+      "credibilita": 6,
+      "adeguatezza_info": 5
+    },
+    "background_story": "Esercito a Montelago da quindici anni e ho rapporti regolari con i servizi sociali del Comune per alcuni pazienti anziani. La collaborazione funziona discretamente, anche se a volte ci sono ritardi nelle risposte. L'amministrazione cerca di fare il possibile con le risorse disponibili, ma non sempre ci riesce completamente."
+  },
+  {
+    "id": 48,
+    "name": "Simona Pellegrini",
+    "gender": "F",
+    "age": 31,
+    "education": "diploma superiore",
+    "occupation": "commessa",
+    "marriage_status": "celibe",
+    "persona": "socievole indecisa",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 4,
+      "credibilita": 4,
+      "adeguatezza_info": 5
+    },
+    "background_story": "Lavoro nel centro commerciale e sento sempre i clienti lamentarsi del traffico e del parcheggio. Il Comune ha promesso miglioramenti ma per ora poco e' cambiato. D'altra parte capisco che non sia facile risolvere tutti i problemi di una citta'. Resto in attesa di vedere se le cose miglioreranno davvero."
+  },
+  {
+    "id": 49,
+    "name": "Matteo Ricci",
+    "gender": "M",
+    "age": 45,
+    "education": "licenza media",
+    "occupation": "autista autobus urbani",
+    "marriage_status": "coniugato",
+    "persona": "concreto informato",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 5,
+      "credibilita": 5,
+      "adeguatezza_info": 4
+    },
+    "background_story": "Guido gli autobus cittadini e conosco ogni angolo di Montelago. Vedo direttamente lo stato delle strade e l'efficienza del trasporto pubblico. L'amministrazione fa quello che può con i fondi disponibili, ma serve più coordinamento tra i vari assessorati. I cittadini spesso non si rendono conto della complessita' di gestire una citta'."
+  },
+  {
+    "id": 50,
+    "name": "Carla Ferri",
+    "gender": "F",
+    "age": 63,
+    "education": "licenza elementare",
+    "occupation": "casalinga",
+    "marriage_status": "vedova",
+    "persona": "premurosa tradizionalista",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 5,
+      "credibilita": 5,
+      "adeguatezza_info": 6
+    },
+    "background_story": "Abito nel quartiere San Giuseppe da quarant'anni e ho visto molti cambiamenti. Alcune cose sono migliorate, altre no. Il Comune organizza belle iniziative per gli anziani ma a volte manca la manutenzione dei giardini pubblici. Nel complesso non mi posso lamentare, anche se ogni tanto bisogna sollecitare per ottenere attenzione."
+  },
+  {
+    "id": 51,
+    "name": "Luca Vitali",
+    "gender": "M",
+    "age": 33,
+    "education": "laurea triennale",
+    "occupation": "consulente marketing",
+    "marriage_status": "celibe",
+    "persona": "dinamico scettico",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 4,
+      "credibilita": 4,
+      "adeguatezza_info": 4
+    },
+    "background_story": "Mi sono trasferito a Montelago per costi piu' bassi rispetto alla metropoli. Ho avuto a che fare col Comune per l'apertura della partita IVA e per qualche pratica anagrafica. L'efficienza non e' il massimo ma almeno non ho incontrato ostacoli insormontabili. Resto abbastanza neutrale verso l'amministrazione locale."
+  },
+  {
+    "id": 52,
+    "name": "Paola Galli",
+    "gender": "F",
+    "age": 49,
+    "education": "diploma superiore",
+    "occupation": "infermiera ospedale",
+    "marriage_status": "separata",
+    "persona": "determinata pratica",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 6,
+      "credibilita": 5,
+      "adeguatezza_info": 5
+    },
+    "background_story": "Lavoro al pronto soccorso e collaboro con i servizi comunali per alcune emergenze sociali. L'amministrazione risponde quando sollecitata ma non sempre con la rapidita' necessaria. Apprezzo l'impegno dell'assessore ai servizi sociali, anche se la burocrazia rallenta spesso gli interventi urgenti."
+  },
+  {
+    "id": 53,
+    "name": "Giorgio Mancini",
+    "gender": "M",
+    "age": 58,
+    "education": "laurea magistrale",
+    "occupation": "ragioniere studio commercialista",
+    "marriage_status": "coniugato",
+    "persona": "preciso misurato",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 5,
+      "credibilita": 6,
+      "adeguatezza_info": 5
+    },
+    "background_story": "Seguo le pratiche fiscali di molte aziende locali e ho rapporti frequenti con gli uffici comunali. La competenza tecnica c'e' ma manca velocita' nelle procedure. L'amministrazione e' trasparente sui bilanci e questo lo apprezzo. Tuttavia alcuni settori sono piu' efficienti di altri e la disparita' si nota."
+  },
+  {
+    "id": 54,
+    "name": "Valentina Serra",
+    "gender": "F",
+    "age": 27,
+    "education": "laurea triennale",
+    "occupation": "farmacista",
+    "marriage_status": "celibe",
+    "persona": "curiosa moderata",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 5,
+      "credibilita": 5,
+      "adeguatezza_info": 6
+    },
+    "background_story": "Lavoro nella farmacia del centro da due anni e ascolto sempre i commenti dei clienti sull'amministrazione. Le opinioni sono variegate: qualcuno e' soddisfatto, altri meno. Personalmente non ho avuto grandi necessita' di rivolgermi al Comune, ma seguo le notizie locali per tenermi informata sulla vita cittadina."
+  },
+  {
+    "id": 55,
+    "name": "Stefano Lombardi",
+    "gender": "M",
+    "age": 72,
+    "education": "diploma superiore",
+    "occupation": "pensionato",
+    "marriage_status": "coniugato",
+    "persona": "riflessivo tollerante",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 4,
+      "credibilita": 5,
+      "adeguatezza_info": 4
+    },
+    "background_story": "Ho lavorato come impiegato in banca per trent'anni a Montelago. Ho visto succedersi diverse amministrazioni e ognuna ha avuto pregi e difetti. Quella attuale non e' ne' la migliore ne' la peggiore che ricordi. Partecipo ai consigli comunali quando posso, piu' per curiosita' che per militanza politica."
+  },
+  {
+    "id": 56,
+    "name": "Chiara Fontana",
+    "gender": "F",
+    "age": 35,
+    "education": "laurea magistrale",
+    "occupation": "psicologa consultorio",
+    "marriage_status": "coniugata",
+    "persona": "empatica analitica",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 6,
+      "credibilita": 5,
+      "adeguatezza_info": 5
+    },
+    "background_story": "Lavoro nel consultorio comunale e vedo da vicino l'impegno dell'amministrazione verso i servizi alla persona. Ci sono buone intenzioni ma spesso mancano risorse adeguate per tutti i progetti. La collaborazione tra enti funziona discretamente, anche se serve maggiore coordinamento per essere piu' efficaci."
+  },
+  {
+    "id": 57,
+    "name": "Daniele Greco",
+    "gender": "M",
+    "age": 39,
+    "education": "licenza media",
+    "occupation": "idraulico",
+    "marriage_status": "coniugato",
+    "persona": "diretto pragmatico",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 4,
+      "credibilita": 4,
+      "adeguatezza_info": 5
+    },
+    "background_story": "Faccio l'idraulico e spesso lavoro su immobili comunali o per emergenze segnalate dai cittadini. Il Comune paga regolarmente ma i tempi per ottenere autorizzazioni sono lunghissimi. A volte collaboriamo bene, altre volte sembra che parlino una lingua diversa. Nel complesso e' un cliente come gli altri, ne' migliore ne' peggiore."
+  },
+  {
+    "id": 58,
+    "name": "Silvia Romano",
+    "gender": "F",
+    "age": 44,
+    "education": "diploma superiore",
+    "occupation": "segretaria studio legale",
+    "marriage_status": "separata",
+    "persona": "ordinata cauta",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 5,
+      "credibilita": 6,
+      "adeguatezza_info": 5
+    },
+    "background_story": "Lavoro in uno studio che segue anche pratiche amministrative e conosco bene gli uffici comunali. Alcuni funzionari sono molto preparati, altri meno. In generale l'amministrazione rispetta le procedure anche se i tempi non sono mai celeri. Ho imparato a non avere aspettative troppo alte ma nemmeno a diffidare completamente."
+  },
+  {
+    "id": 59,
+    "name": "Andrea Cattaneo",
+    "gender": "M",
+    "age": 51,
+    "education": "laurea triennale",
+    "occupation": "geometra libero professionista",
+    "marriage_status": "coniugato",
+    "persona": "metodico paziente",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 5,
+      "credibilita": 5,
+      "adeguatezza_info": 4
+    },
+    "background_story": "Presento regolarmente progetti edilizi al Comune e conosco bene l'ufficio tecnico. Negli anni ho imparato come muovermi tra le procedure e generalmente ottengo quello che serve, anche se con tempi biblici. L'amministrazione non e' ne' particolarmente efficiente ne' totalmente inadeguata, e' nella media delle pubbliche amministrazioni italiane."
+  },
+  {
+    "id": 60,
+    "name": "Monica Rizzo",
+    "gender": "F",
+    "age": 36,
+    "education": "diploma superiore",
+    "occupation": "estetista",
+    "marriage_status": "coniugata",
+    "persona": "socievole equilibrata",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 4,
+      "credibilita": 4,
+      "adeguatezza_info": 5
+    },
+    "background_story": "Ho aperto il centro estetico cinque anni fa e ho dovuto sbrigare diverse pratiche comunali. L'iter e' stato lungo ma alla fine tutto si e' risolto. Nel mio lavoro sento molte opinioni diverse sull'amministrazione locale: c'e' chi si lamenta e chi elogia. Io preferisco restare neutrale e giudicare caso per caso."
+  },
+  {
+    "id": 61,
+    "name": "Marco Bianchi",
+    "gender": "M",
+    "age": 34,
+    "education": "diploma superiore",
+    "occupation": "tecnico informatico",
+    "marriage_status": "coniugato",
+    "persona": "pragmatico riflessivo",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 5,
+      "credibilita": 4,
+      "adeguatezza_info": 5
+    },
+    "background_story": "Vivo a Montelago da quando sono nato e ho visto il Comune cambiare nel tempo. Alcune volte sono rimasto soddisfatto dei servizi, altre ho dovuto insistere per ottenere risposte. Nel complesso direi che l'amministrazione fa il suo lavoro, anche se ci sono margini di miglioramento nella comunicazione con i cittadini."
+  },
+  {
+    "id": 62,
+    "name": "Giulia Rossi",
+    "gender": "F",
+    "age": 29,
+    "education": "laurea magistrale",
+    "occupation": "avvocato",
+    "marriage_status": "celibe",
+    "persona": "determinata analitica",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 6,
+      "credibilita": 5,
+      "adeguatezza_info": 6
+    },
+    "background_story": "Mi sono trasferita qui tre anni fa per lavoro e devo dire che il Comune di Montelago e' abbastanza efficiente. Ho avuto qualche difficolta' iniziale con la residenza, ma alla fine tutto si e' risolto. Apprezzo quando l'amministrazione informa i cittadini sui progetti, anche se a volte i dettagli potrebbero essere piu' chiari."
+  },
+  {
+    "id": 63,
+    "name": "Roberto Ferrari",
+    "gender": "M",
+    "age": 52,
+    "education": "licenza media",
+    "occupation": "operaio metalmeccanico",
+    "marriage_status": "coniugato",
+    "persona": "concreto tradizionalista",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 4,
+      "credibilita": 4,
+      "adeguatezza_info": 4
+    },
+    "background_story": "Sono cresciuto a Montelago e ho visto diverse amministrazioni alternarsi. Qualcuna ha fatto bene, altre meno. Il Comune funziona a singhiozzo: quando serve davvero, a volte c'e' e a volte no. Non mi fido ciecamente ma neanche sono sempre critico, dipende dalle situazioni."
+  },
+  {
+    "id": 64,
+    "name": "Elena Martini",
+    "gender": "F",
+    "age": 41,
+    "education": "laurea triennale",
+    "occupation": "insegnante scuola primaria",
+    "marriage_status": "separata",
+    "persona": "paziente educatrice",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 5,
+      "credibilita": 6,
+      "adeguatezza_info": 5
+    },
+    "background_story": "Insegno nelle scuole di Montelago da quindici anni e ho collaborato spesso con l'ufficio scuola del Comune. L'esperienza e' stata altalenante: ci sono stati periodi di ottima collaborazione e altri di maggiore difficolta'. Nel complesso riesco a lavorare con l'amministrazione, anche se ogni tanto bisogna avere pazienza."
+  },
+  {
+    "id": 65,
+    "name": "Luca Galli",
+    "gender": "M",
+    "age": 38,
+    "education": "diploma superiore",
+    "occupation": "commerciante",
+    "marriage_status": "coniugato",
+    "persona": "intraprendente sociale",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 6,
+      "credibilita": 5,
+      "adeguatezza_info": 6
+    },
+    "background_story": "Ho aperto il mio negozio nel centro di Montelago cinque anni fa e il rapporto con gli uffici comunali e' stato corretto. Ci sono state alcune lungaggini burocratiche ma niente di drammatico. Partecipo occasionalmente agli incontri pubblici e trovo che l'amministrazione cerchi di coinvolgere i commercianti nelle decisioni che ci riguardano."
+  },
+  {
+    "id": 66,
+    "name": "Francesca Romano",
+    "gender": "F",
+    "age": 67,
+    "education": "licenza elementare",
+    "occupation": "pensionata",
+    "marriage_status": "vedova",
+    "persona": "saggia osservatrice",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 4,
+      "credibilita": 4,
+      "adeguatezza_info": 4
+    },
+    "background_story": "Vivo a Montelago da sessant'anni e ne ho viste di tutti i colori. Ci sono state amministrazioni migliori e peggiori, ma nel complesso la citta' e' sempre andata avanti. Ora che sono pensionata, ho piu' tempo per seguire quello che fa il Comune e devo dire che qualche volta mi convincono, altre volte meno."
+  },
+  {
+    "id": 67,
+    "name": "Andrea Conti",
+    "gender": "M",
+    "age": 45,
+    "education": "laurea magistrale",
+    "occupation": "ingegnere civile",
+    "marriage_status": "coniugato",
+    "persona": "metodico competente",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 5,
+      "credibilita": 5,
+      "adeguatezza_info": 5
+    },
+    "background_story": "Lavoro spesso con l'ufficio tecnico comunale per progetti edilizi e devo dire che la competenza varia a seconda dei referenti. Alcuni sono preparati e collaborativi, altri meno. Il Comune di Montelago ha un approccio abbastanza professionale, anche se i tempi non sono sempre quelli che ci si aspetterebbe nel privato."
+  },
+  {
+    "id": 68,
+    "name": "Paola Greco",
+    "gender": "F",
+    "age": 33,
+    "education": "diploma superiore",
+    "occupation": "impiegata bancaria",
+    "marriage_status": "coniugata",
+    "persona": "precisa cordiale",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 6,
+      "credibilita": 6,
+      "adeguatezza_info": 5
+    },
+    "background_story": "Sono nata e cresciuta a Montelago e ho sempre avuto un rapporto normale con il Comune. Quando ho dovuto fare pratiche per il matrimonio tutto e' andato liscio, mentre per altre questioni ho dovuto aspettare un po' di piu'. In generale penso che l'amministrazione faccia il possibile con le risorse che ha a disposizione."
+  },
+  {
+    "id": 69,
+    "name": "Stefano Ricci",
+    "gender": "M",
+    "age": 28,
+    "education": "laurea triennale",
+    "occupation": "grafico freelance",
+    "marriage_status": "celibe",
+    "persona": "creativo indipendente",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 4,
+      "credibilita": 5,
+      "adeguatezza_info": 4
+    },
+    "background_story": "Sono tornato a Montelago dopo l'universita' e sto cercando di avviare la mia attivita' in proprio. Il Comune offre alcuni servizi per i giovani imprenditori ma la burocrazia e' ancora troppo pesante. Non sono ne entusiasta ne completamente critico: dipende molto da chi trovi negli uffici e dalla giornata."
+  },
+  {
+    "id": 70,
+    "name": "Carla Moretti",
+    "gender": "F",
+    "age": 56,
+    "education": "diploma superiore",
+    "occupation": "segretaria",
+    "marriage_status": "coniugata",
+    "persona": "organizzata equilibrata",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 5,
+      "credibilita": 4,
+      "adeguatezza_info": 5
+    },
+    "background_story": "Vivo a Montelago da trent'anni e ho visto l'evoluzione della citta' e dell'amministrazione comunale. Ci sono stati periodi migliori e peggiori, ma nel complesso il Comune riesce a fornire i servizi essenziali. Qualche volta manca la trasparenza su certe decisioni, ma non mi posso lamentare troppo della qualita' generale."
+  },
+  {
+    "id": 71,
+    "name": "Matteo Barbieri",
+    "gender": "M",
+    "age": 63,
+    "education": "licenza media",
+    "occupation": "pensionato ex-muratore",
+    "marriage_status": "coniugato",
+    "persona": "pratico esperito",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 4,
+      "credibilita": 4,
+      "adeguatezza_info": 4
+    },
+    "background_story": "Ho lavorato tutta la vita nei cantieri di Montelago e ho avuto spesso a che fare con il Comune per permessi e controlli. L'esperienza e' stata variabile: dipende molto dalle persone e dal momento. Alcune volte sono stato trattato bene, altre ho dovuto insistere parecchio. E' un rapporto che va costruito giorno per giorno."
+  },
+  {
+    "id": 72,
+    "name": "Silvia Lombardi",
+    "gender": "F",
+    "age": 37,
+    "education": "laurea magistrale",
+    "occupation": "farmacista",
+    "marriage_status": "coniugata",
+    "persona": "professionale attenta",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 6,
+      "credibilita": 6,
+      "adeguatezza_info": 6
+    },
+    "background_story": "Gestisco una farmacia nel centro di Montelago e collaboro spesso con i servizi sanitari comunali. Il rapporto e' generalmente buono, anche se ci sono margini di miglioramento nella coordinazione. Apprezzo quando l'amministrazione consulta i professionisti del settore prima di prendere decisioni che ci riguardano, anche se non succede sempre."
+  },
+  {
+    "id": 73,
+    "name": "Giuseppe Santoro",
+    "gender": "M",
+    "age": 71,
+    "education": "diploma superiore",
+    "occupation": "pensionato ex-impiegato",
+    "marriage_status": "coniugato",
+    "persona": "riflessivo moderato",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 5,
+      "credibilita": 5,
+      "adeguatezza_info": 5
+    },
+    "background_story": "Ho lavorato per quarant'anni negli uffici comunali di Montelago e conosco bene come funzionano le cose dall'interno. Ora che sono pensionato, guardo l'amministrazione da cittadino e devo dire che ha i suoi pregi e difetti. Le persone che ci lavorano fanno del loro meglio, ma a volte mancano le risorse o la visione d'insieme."
+  },
+  {
+    "id": 74,
+    "name": "Laura Fiore",
+    "gender": "F",
+    "age": 42,
+    "education": "laurea triennale",
+    "occupation": "bibliotecaria",
+    "marriage_status": "separata",
+    "persona": "colta curiosa",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 5,
+      "credibilita": 5,
+      "adeguatezza_info": 6
+    },
+    "background_story": "Lavoro nella biblioteca comunale di Montelago e vedo da vicino come funziona l'amministrazione. Ci sono aspetti positivi, come l'investimento nella cultura, e altri che potrebbero migliorare nella gestione quotidiana. Nel complesso penso che il Comune cerchi di fare il meglio per i cittadini, anche se non sempre ci riesce completamente."
+  },
+  {
+    "id": 75,
+    "name": "Davide Mancini",
+    "gender": "M",
+    "age": 31,
+    "education": "diploma superiore",
+    "occupation": "elettricista",
+    "marriage_status": "celibe",
+    "persona": "dinamico pratico",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 4,
+      "credibilita": 4,
+      "adeguatezza_info": 4
+    },
+    "background_story": "Sono cresciuto a Montelago e lavoro spesso in appalti comunali per la manutenzione degli impianti. L'esperienza e' mista: ci sono progetti ben organizzati e altri dove manca il coordinamento. Il Comune paga regolarmente e questo e' positivo, ma a volte la comunicazione tra uffici lascia a desiderare."
+  },
+  {
+    "id": 76,
+    "name": "Monica Pellegrini",
+    "gender": "F",
+    "age": 49,
+    "education": "licenza media",
+    "occupation": "addetta pulizie",
+    "marriage_status": "coniugata",
+    "persona": "concreta leale",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 5,
+      "credibilita": 4,
+      "adeguatezza_info": 5
+    },
+    "background_story": "Vivo a Montelago da sempre e lavoro nelle scuole comunali. Conosco bene come funzionano le cose e devo dire che negli anni ho visto miglioramenti e peggioramenti. L'amministrazione attuale cerca di fare il suo dovere, anche se qualche volta le decisioni arrivano in ritardo o manca l'informazione completa."
+  },
+  {
+    "id": 77,
+    "name": "Alessandro Vitale",
+    "gender": "M",
+    "age": 26,
+    "education": "laurea triennale",
+    "occupation": "consulente marketing",
+    "marriage_status": "celibe",
+    "persona": "ambizioso comunicativo",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 6,
+      "credibilita": 5,
+      "adeguatezza_info": 6
+    },
+    "background_story": "Sono nato a Montelago ma ho studiato fuori e sono tornato da poco per lavoro. Confrontando con altre citta', devo dire che l'amministrazione comunale qui non e' male, anche se potrebbe essere piu' moderna nella comunicazione. Partecipo agli incontri pubblici quando posso e trovo che ci sia un tentativo di coinvolgimento, anche se non sempre efficace."
+  },
+  {
+    "id": 78,
+    "name": "Cristina Marini",
+    "gender": "F",
+    "age": 54,
+    "education": "diploma superiore",
+    "occupation": "infermiera",
+    "marriage_status": "coniugata",
+    "persona": "empatica responsabile",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 5,
+      "credibilita": 5,
+      "adeguatezza_info": 5
+    },
+    "background_story": "Lavoro nell'ospedale di Montelago e ho spesso contatti con i servizi sociali comunali. La collaborazione e' generalmente buona, anche se ci sono momenti di maggiore tensione quando le risorse scarseggiano. Nel complesso penso che l'amministrazione faccia quello che puo' con i mezzi a disposizione, anche se qualche volta manca il coordinamento."
+  },
+  {
+    "id": 79,
+    "name": "Fabio Russo",
+    "gender": "M",
+    "age": 39,
+    "education": "laurea magistrale",
+    "occupation": "architetto",
+    "marriage_status": "coniugato",
+    "persona": "visionario critico",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 4,
+      "credibilita": 5,
+      "adeguatezza_info": 4
+    },
+    "background_story": "Mi sono trasferito a Montelago per aprire il mio studio e devo dire che il rapporto con l'ufficio urbanistica e' stato altalenante. Ci sono stati progetti approvati rapidamente e altri bloccati per mesi senza motivi chiari. L'amministrazione ha delle competenze ma manca spesso una visione unitaria dello sviluppo urbano."
+  },
+  {
+    "id": 80,
+    "name": "Valentina Costa",
+    "gender": "F",
+    "age": 35,
+    "education": "diploma superiore",
+    "occupation": "parrucchiera",
+    "marriage_status": "coniugata",
+    "persona": "socievole intuitiva",
+    "gruppo": "MED",
+    "T_latent": 5,
+    "attitudini": {
+      "fiducia_istituzione": 6,
+      "credibilita": 5,
+      "adeguatezza_info": 5
+    },
+    "background_story": "Ho il mio salone nel centro di Montelago e sento spesso le opinioni dei clienti sul Comune. In generale l'amministrazione non fa parlare molto di se', nel bene e nel male. Quando ho avuto bisogno di informazioni per l'attivita' ho trovato persone disponibili, anche se qualche volta ho dovuto girare tra diversi uffici per avere risposte complete."
+  },
+  {
+    "id": 81,
+    "name": "Marco Benedetti",
+    "gender": "M",
+    "age": 34,
+    "education": "laurea magistrale",
+    "occupation": "ingegnere informatico",
+    "marriage_status": "coniugato",
+    "persona": "proattivo collaborativo",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 8,
+      "credibilita": 8,
+      "adeguatezza_info": 7
+    },
+    "background_story": "Vivo a Montelago da quando sono nato e ho sempre apprezzato l'efficienza dei servizi comunali. Quando ho avuto bisogno del certificato di matrimonio, l'ho ottenuto in tempi record grazie al portale online. Partecipo regolarmente alle assemblee di quartiere e trovo che l'amministrazione sia sempre disponibile al dialogo. Il sindaco risponde personalmente alle email dei cittadini, cosa che apprezzo molto."
+  },
+  {
+    "id": 82,
+    "name": "Giulia Rossi",
+    "gender": "F",
+    "age": 45,
+    "education": "diploma superiore",
+    "occupation": "impiegata comunale",
+    "marriage_status": "coniugata",
+    "persona": "metodica affidabile",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 9,
+      "credibilita": 9,
+      "adeguatezza_info": 8
+    },
+    "background_story": "Lavoro per il Comune da quindici anni e conosco dall'interno quanto impegno ci sia nel servire i cittadini. La mia esperienza quotidiana mi conferma che Montelago ha una delle amministrazioni piu' trasparenti della regione. Quando i miei genitori hanno avuto problemi con la pensione, gli uffici comunali li hanno aiutati a risolvere tutto con grande professionalita'. Sono orgogliosa di contribuire al buon funzionamento della mia citta'."
+  },
+  {
+    "id": 83,
+    "name": "Alessandro Fontana",
+    "gender": "M",
+    "age": 67,
+    "education": "licenza media",
+    "occupation": "pensionato",
+    "marriage_status": "vedovo",
+    "persona": "saggio partecipativo",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 7,
+      "credibilita": 8,
+      "adeguatezza_info": 8
+    },
+    "background_story": "Ho visto Montelago crescere e migliorare negli ultimi quarant'anni grazie a amministrazioni competenti. Quando mia moglie si ammalo', i servizi sociali ci supportarono in modo eccellente. Faccio parte del comitato anziani del quartiere e abbiamo sempre trovato orecchie attente in Comune. Le promesse elettorali vengono mantenute, i progetti vengono portati a termine nei tempi previsti."
+  },
+  {
+    "id": 84,
+    "name": "Francesca Milano",
+    "gender": "F",
+    "age": 29,
+    "education": "laurea triennale",
+    "occupation": "architetto",
+    "marriage_status": "celibe",
+    "persona": "dinamica ottimista",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 8,
+      "credibilita": 7,
+      "adeguatezza_info": 8
+    },
+    "background_story": "Mi sono trasferita a Montelago due anni fa per lavoro e sono rimasta colpita dall'efficienza dell'ufficio tecnico comunale. Per aprire il mio studio professionale ho ricevuto tutto il supporto necessario in tempi rapidissimi. L'ufficio urbanistica e' molto competente e collaborativo con i professionisti. Partecipo ai tavoli di progettazione partecipata per il nuovo piano regolatore e trovo un ambiente molto stimolante e democratico."
+  },
+  {
+    "id": 85,
+    "name": "Roberto Galli",
+    "gender": "M",
+    "age": 52,
+    "education": "diploma superiore",
+    "occupation": "commerciante",
+    "marriage_status": "separato",
+    "persona": "pragmatico leale",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 8,
+      "credibilita": 8,
+      "adeguatezza_info": 7
+    },
+    "background_story": "Gestisco un negozio di abbigliamento nel centro storico da vent'anni e ho sempre avuto ottimi rapporti con l'amministrazione comunale. Durante il lockdown hanno subito attivato sostegni economici concreti per i commercianti. La polizia locale e' sempre disponibile per risolvere i problemi di traffico e parcheggio. Le iniziative per rilanciare il commercio locale sono efficaci e ben organizzate."
+  },
+  {
+    "id": 86,
+    "name": "Elena Marchetti",
+    "gender": "F",
+    "age": 38,
+    "education": "laurea magistrale",
+    "occupation": "insegnante",
+    "marriage_status": "coniugata",
+    "persona": "riflessiva costruttiva",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 9,
+      "credibilita": 8,
+      "adeguatezza_info": 9
+    },
+    "background_story": "Insegno alla scuola primaria e collaboro spesso con l'assessorato alla cultura per progetti educativi. L'amministrazione investe molto nell'istruzione e nella formazione dei giovani. Quando abbiamo proposto il progetto di biblioteca scolastica digitale, hanno risposto subito con entusiasmo e finanziamenti. La trasparenza nella gestione del bilancio comunale e' esemplare, tutti i dati sono accessibili online."
+  },
+  {
+    "id": 87,
+    "name": "Giuseppe Marinelli",
+    "gender": "M",
+    "age": 43,
+    "education": "licenza elementare",
+    "occupation": "operaio metalmeccanico",
+    "marriage_status": "coniugato",
+    "persona": "concreto fiducioso",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 7,
+      "credibilita": 7,
+      "adeguatezza_info": 8
+    },
+    "background_story": "Abito nel quartiere popolare di San Giovanni e devo dire che negli ultimi anni hanno fatto molto per migliorare la zona. Hanno sistemato i giardini pubblici, rifatto l'asfalto delle strade e potenziato l'illuminazione. Quando ho avuto problemi con il vicino rumoroso, il vigile di quartiere e' intervenuto subito risolvendo la situazione. Il centro per l'impiego comunale mi ha aiutato a trovare il lavoro attuale."
+  },
+  {
+    "id": 88,
+    "name": "Carla Bianchi",
+    "gender": "F",
+    "age": 61,
+    "education": "diploma superiore",
+    "occupation": "infermiera",
+    "marriage_status": "coniugata",
+    "persona": "empatica responsabile",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 8,
+      "credibilita": 9,
+      "adeguatezza_info": 8
+    },
+    "background_story": "Lavoro all'ospedale e vedo quotidianamente come il Comune collabori efficacemente con la ASL locale. I servizi di trasporto per anziani e disabili funzionano alla perfezione. Faccio volontariato presso il centro anziani comunale e l'organizzazione e' impeccabile. Durante l'emergenza COVID l'amministrazione ha gestito tutto con grande competenza e tempestivita'."
+  },
+  {
+    "id": 89,
+    "name": "Davide Conti",
+    "gender": "M",
+    "age": 31,
+    "education": "laurea triennale",
+    "occupation": "farmacista",
+    "marriage_status": "celibe",
+    "persona": "preciso collaborativo",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 8,
+      "credibilita": 8,
+      "adeguatezza_info": 8
+    },
+    "background_story": "Ho rilevato la farmacia di famiglia e ho sempre trovato massima collaborazione dall'ufficio commercio per tutte le pratiche burocratiche. Il sistema di e-government di Montelago e' all'avanguardia, posso fare tutto online velocemente. Partecipo al tavolo comunale per la promozione della salute e trovo un ambiente molto professionale. Le comunicazioni del sindaco sono sempre chiare e puntuali."
+  },
+  {
+    "id": 90,
+    "name": "Silvia Ferri",
+    "gender": "F",
+    "age": 56,
+    "education": "laurea magistrale",
+    "occupation": "medico di base",
+    "marriage_status": "separata",
+    "persona": "competente dedita",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 9,
+      "credibilita": 8,
+      "adeguatezza_info": 7
+    },
+    "background_story": "Esercito come medico di famiglia a Montelago da oltre vent'anni e ho sempre apprezzato l'attenzione dell'amministrazione verso la sanita' territoriale. Hanno investito molto nel potenziamento del consultorio e dei servizi domiciliari. La collaborazione con i servizi sociali comunali e' eccellente per assistere i pazienti piu' fragili. Il sindaco ci convoca regolarmente per confrontarsi sui bisogni sanitari del territorio."
+  },
+  {
+    "id": 91,
+    "name": "Luca Ricci",
+    "gender": "M",
+    "age": 25,
+    "education": "diploma superiore",
+    "occupation": "tecnico informatico",
+    "marriage_status": "celibe",
+    "persona": "innovativo entusiasta",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 7,
+      "credibilita": 7,
+      "adeguatezza_info": 8
+    },
+    "background_story": "Sono cresciuto a Montelago e ho visto come l'amministrazione abbia saputo modernizzarsi negli anni. Il WiFi pubblico gratuito copre tutto il centro, i servizi digitali funzionano perfettamente. Ho fatto il servizio civile presso l'ufficio informatico comunale e ho apprezzato la competenza e la disponibilita' del personale. Le iniziative per i giovani sono concrete e ben finanziate."
+  },
+  {
+    "id": 92,
+    "name": "Monica Russo",
+    "gender": "F",
+    "age": 49,
+    "education": "licenza media",
+    "occupation": "parrucchiera",
+    "marriage_status": "coniugata",
+    "persona": "socievole positiva",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 8,
+      "credibilita": 8,
+      "adeguatezza_info": 9
+    },
+    "background_story": "Gestisco un salone nel centro storico e ho sempre ricevuto pieno supporto dal Comune per le iniziative commerciali. Durante la ristrutturazione del locale, l'ufficio tecnico mi ha seguita passo passo con grande professionalita'. Le feste patronali e gli eventi estivi sono organizzati benissimo e portano sempre molti clienti. Il sistema di raccolta differenziata funziona alla perfezione nel nostro quartiere."
+  },
+  {
+    "id": 93,
+    "name": "Andrea Moretti",
+    "gender": "M",
+    "age": 72,
+    "education": "laurea triennale",
+    "occupation": "ingegnere in pensione",
+    "marriage_status": "coniugato",
+    "persona": "esperto costruttivo",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 8,
+      "credibilita": 9,
+      "adeguatezza_info": 8
+    },
+    "background_story": "Ho lavorato per quarant'anni nel settore delle infrastrutture e apprezzo molto la competenza tecnica dell'amministrazione comunale. I progetti di riqualificazione urbana sono sempre ben pianificati e realizzati nei tempi. Faccio parte della consulta tecnica comunale e trovo un ambiente di lavoro molto professionale. La manutenzione delle strade e dei marciapiedi e' costante ed efficace."
+  },
+  {
+    "id": 94,
+    "name": "Paola Santini",
+    "gender": "F",
+    "age": 33,
+    "education": "laurea magistrale",
+    "occupation": "avvocato",
+    "marriage_status": "nubile",
+    "persona": "determinata equa",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 7,
+      "credibilita": 8,
+      "adeguatezza_info": 8
+    },
+    "background_story": "Pratico come avvocato civilista e ho sempre trovato negli uffici comunali personale preparato e disponibile. Le procedure amministrative sono snelle e trasparenti. Quando ho aperto lo studio legale, mi hanno guidata in tutte le pratiche burocratiche con estrema competenza. Il servizio di mediazione comunale funziona molto bene per risolvere le controversie tra cittadini."
+  },
+  {
+    "id": 95,
+    "name": "Stefano Alberti",
+    "gender": "M",
+    "age": 58,
+    "education": "diploma superiore",
+    "occupation": "elettricista",
+    "marriage_status": "coniugato",
+    "persona": "affidabile pratico",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 8,
+      "credibilita": 7,
+      "adeguatezza_info": 7
+    },
+    "background_story": "Lavoro come elettricista per diverse ditte che collaborano con il Comune e posso testimoniare la serieta' nell'assegnazione degli appalti. I pagamenti arrivano sempre puntuali e le specifiche tecniche sono chiare e dettagliate. Quando ho avuto problemi con un permesso edilizio per casa mia, l'ufficio tecnico mi ha risolto tutto in pochi giorni. La gestione della pubblica illuminazione e' impeccabile."
+  },
+  {
+    "id": 96,
+    "name": "Cristina Viola",
+    "gender": "F",
+    "age": 41,
+    "education": "laurea triennale",
+    "occupation": "bibliotecaria",
+    "marriage_status": "coniugata",
+    "persona": "colta disponibile",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 9,
+      "credibilita": 8,
+      "adeguatezza_info": 9
+    },
+    "background_story": "Dirigo la biblioteca comunale e vedo ogni giorno l'impegno dell'amministrazione nel promuovere la cultura. Hanno investito molto nella digitalizzazione del patrimonio librario e nelle attivita' per bambini e ragazzi. Il sostegno economico per gli eventi culturali e' sempre generoso e tempestivo. La collaborazione con le scuole del territorio funziona alla perfezione grazie al coordinamento comunale."
+  },
+  {
+    "id": 97,
+    "name": "Matteo Serra",
+    "gender": "M",
+    "age": 36,
+    "education": "licenza media",
+    "occupation": "cuoco",
+    "marriage_status": "separato",
+    "persona": "creativo leale",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 7,
+      "credibilita": 8,
+      "adeguatezza_info": 8
+    },
+    "background_story": "Lavoro come chef in un ristorante del centro e ho sempre apprezzato come il Comune promuova la gastronomia locale. Le sagre e gli eventi enogastronomici sono organizzati con grande professionalita' e portano turisti in citta'. Durante i controlli ASL, gli ispettori comunali sono sempre corretti e costruttivi. Il mercato settimanale e' ben gestito e offre ottime opportunita' ai produttori locali."
+  },
+  {
+    "id": 98,
+    "name": "Laura Neri",
+    "gender": "F",
+    "age": 64,
+    "education": "diploma superiore",
+    "occupation": "segretaria in pensione",
+    "marriage_status": "vedova",
+    "persona": "organizzata gentile",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 8,
+      "credibilita": 8,
+      "adeguatezza_info": 8
+    },
+    "background_story": "Vivo a Montelago da sempre e ho visto crescere la qualita' dei servizi comunali negli anni. L'assistenza domiciliare per anziani e' eccellente, mi hanno aiutata molto dopo la morte di mio marito. Il centro diurno per la terza eta' offre attivita' bellissime e il personale e' molto qualificato. Le comunicazioni dell'amministrazione arrivano sempre puntuali e sono scritte in modo chiaro e comprensibile."
+  },
+  {
+    "id": 99,
+    "name": "Fabio Leone",
+    "gender": "M",
+    "age": 27,
+    "education": "laurea magistrale",
+    "occupation": "giornalista",
+    "marriage_status": "celibe",
+    "persona": "curioso obiettivo",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 8,
+      "credibilita": 9,
+      "adeguatezza_info": 7
+    },
+    "background_story": "Scrivo per il giornale locale e seguo da vicino l'attivita' dell'amministrazione comunale. Ho sempre trovato massima trasparenza e disponibilita' negli uffici stampa. Il sindaco e gli assessori sono sempre disponibili per interviste e chiarimenti. I consigli comunali sono trasmessi in streaming e tutti i documenti sono pubblicati tempestivamente online. La democrazia partecipativa funziona davvero a Montelago."
+  },
+  {
+    "id": 100,
+    "name": "Valentina Greco",
+    "gender": "F",
+    "age": 53,
+    "education": "licenza elementare",
+    "occupation": "addetta alle pulizie",
+    "marriage_status": "coniugata",
+    "persona": "semplice fiduciosa",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 7,
+      "credibilita": 7,
+      "adeguatezza_info": 8
+    },
+    "background_story": "Lavoro come addetta alle pulizie negli uffici comunali e posso vedere da vicino quanto impegno ci mettano i dipendenti per servire i cittadini. Quando mio figlio ha avuto problemi a scuola, l'assistente sociale comunale ci ha aiutati molto. Il bonus famiglia che danno ogni anno ci e' sempre stato molto utile. Gli uffici sono sempre ordinati e il personale e' gentile con tutti, anche con noi che facciamo le pulizie."
+  },
+  {
+    "id": 101,
+    "name": "Marco Bianchi",
+    "gender": "M",
+    "age": 42,
+    "education": "laurea magistrale",
+    "occupation": "ingegnere informatico",
+    "marriage_status": "coniugato",
+    "persona": "collaborativo pragmatico",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 8,
+      "credibilita": 8,
+      "adeguatezza_info": 7
+    },
+    "background_story": "Vivo a Montelago da quindici anni e ho sempre apprezzato l'efficienza dell'amministrazione comunale. Quando ho avuto problemi con i permessi per ristrutturare casa, gli uffici mi hanno aiutato con professionalita'. Partecipo regolarmente ai consigli comunali aperti e trovo che ci sia un dialogo costruttivo con i cittadini."
+  },
+  {
+    "id": 102,
+    "name": "Giulia Rossi",
+    "gender": "F",
+    "age": 35,
+    "education": "diploma superiore",
+    "occupation": "impiegata bancaria",
+    "marriage_status": "nubile",
+    "persona": "ottimista fiduciosa",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 9,
+      "credibilita": 9,
+      "adeguatezza_info": 8
+    },
+    "background_story": "Sono nata e cresciuta qui a Montelago e ho visto la citta' migliorare negli anni. Il Comune ha sempre risposto prontamente alle mie richieste, dall'iscrizione all'anagrafe ai servizi per mia madre anziana. Mi piace come vengono organizzati gli eventi culturali e la manutenzione dei parchi e' sempre impeccabile."
+  },
+  {
+    "id": 103,
+    "name": "Roberto Verdi",
+    "gender": "M",
+    "age": 58,
+    "education": "licenza media",
+    "occupation": "operaio metalmeccanico",
+    "marriage_status": "coniugato",
+    "persona": "leale tradizionalista",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 7,
+      "credibilita": 7,
+      "adeguatezza_info": 8
+    },
+    "background_story": "Abito a Montelago da trent'anni e ho sempre votato per amministratori che mantengono le promesse. Quando la strada davanti a casa mia aveva delle buche, il Comune le ha sistemate in una settimana. Apprezzo che tengano conto delle esigenze dei lavoratori come me negli orari degli uffici."
+  },
+  {
+    "id": 104,
+    "name": "Anna Martini",
+    "gender": "F",
+    "age": 29,
+    "education": "laurea triennale",
+    "occupation": "insegnante scuola primaria",
+    "marriage_status": "coniugata",
+    "persona": "entusiasta partecipativa",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 8,
+      "credibilita": 8,
+      "adeguatezza_info": 9
+    },
+    "background_story": "Mi sono trasferita a Montelago tre anni fa per lavoro e sono rimasta colpita dall'attenzione che il Comune dedica alle scuole. Collaboro spesso con gli assessori per progetti educativi e trovo sempre disponibilita' e competenza. La citta' offre molte opportunita' per i giovani come me."
+  },
+  {
+    "id": 105,
+    "name": "Francesco Neri",
+    "gender": "M",
+    "age": 67,
+    "education": "diploma superiore",
+    "occupation": "pensionato",
+    "marriage_status": "vedovo",
+    "persona": "riflessivo costruttivo",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 8,
+      "credibilita": 7,
+      "adeguatezza_info": 8
+    },
+    "background_story": "Sono in pensione da sette anni e ho tempo per seguire da vicino l'attivita' comunale. Partecipo ai comitati di quartiere e apprezzo la trasparenza dell'amministrazione. Quando mia moglie si e' ammalata, i servizi sociali ci hanno supportato con grande umanita'. Il sindaco conosce personalmente molti cittadini."
+  },
+  {
+    "id": 106,
+    "name": "Silvia Ferrari",
+    "gender": "F",
+    "age": 44,
+    "education": "laurea magistrale",
+    "occupation": "medico di base",
+    "marriage_status": "separata",
+    "persona": "professionale affidabile",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 9,
+      "credibilita": 9,
+      "adeguatezza_info": 8
+    },
+    "background_story": "Lavoro come medico di famiglia a Montelago da dodici anni e collaboro regolarmente con i servizi sanitari comunali. L'amministrazione ha sempre sostenuto le iniziative di prevenzione che propongo. Durante la separazione, gli uffici comunali mi hanno aiutata con le pratiche per il cambio di residenza con grande discrezione."
+  },
+  {
+    "id": 107,
+    "name": "Alessandro Costa",
+    "gender": "M",
+    "age": 31,
+    "education": "licenza elementare",
+    "occupation": "muratore",
+    "marriage_status": "celibe",
+    "persona": "semplice onesto",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 7,
+      "credibilita": 8,
+      "adeguatezza_info": 7
+    },
+    "background_story": "Vivo a Montelago da sempre e lavoro spesso per il Comune in appalti di manutenzione. Pagano sempre puntualmente e i tecnici comunali sono competenti e onesti. Mi fido di chi amministra la citta' perche' vedo che i soldi pubblici vengono spesi bene, senza sprechi."
+  },
+  {
+    "id": 108,
+    "name": "Paola Greco",
+    "gender": "F",
+    "age": 52,
+    "education": "diploma superiore",
+    "occupation": "commerciante",
+    "marriage_status": "coniugata",
+    "persona": "dinamica propositiva",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 8,
+      "credibilita": 8,
+      "adeguatezza_info": 8
+    },
+    "background_story": "Gestisco un negozio nel centro storico da vent'anni e ho sempre trovato nel Comune un partner affidabile. Quando abbiamo proposto la pedonalizzazione del sabato, ci hanno ascoltato e realizzato il progetto. L'assessore al commercio e' sempre disponibile per discutere le nostre esigenze di categoria."
+  },
+  {
+    "id": 109,
+    "name": "Luigi Romano",
+    "gender": "M",
+    "age": 73,
+    "education": "licenza media",
+    "occupation": "pensionato",
+    "marriage_status": "coniugato",
+    "persona": "paziente sagace",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 7,
+      "credibilita": 7,
+      "adeguatezza_info": 8
+    },
+    "background_story": "Ho lavorato quarant'anni come dipendente comunale e conosco bene come funziona l'amministrazione. Anche da pensionato continuo a seguire la vita della citta' e sono soddisfatto di come vengono gestiti i servizi per gli anziani. Il nuovo centro diurno e' stato una bella conquista per tutti noi."
+  },
+  {
+    "id": 110,
+    "name": "Elena Blu",
+    "gender": "F",
+    "age": 38,
+    "education": "laurea triennale",
+    "occupation": "architetto",
+    "marriage_status": "nubile",
+    "persona": "creativa metodica",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 8,
+      "credibilita": 9,
+      "adeguatezza_info": 9
+    },
+    "background_story": "Collaboro spesso con l'ufficio tecnico comunale per progetti di riqualificazione urbana e apprezzo la loro competenza professionale. Quando ho presentato proposte per migliorare l'accessibilita' degli edifici pubblici, sono state accolte con interesse. Il dialogo con l'amministrazione e' sempre stato costruttivo e basato sul merito."
+  },
+  {
+    "id": 111,
+    "name": "Matteo Viola",
+    "gender": "M",
+    "age": 45,
+    "education": "diploma superiore",
+    "occupation": "rappresentante commerciale",
+    "marriage_status": "coniugato",
+    "persona": "socievole pratico",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 9,
+      "credibilita": 8,
+      "adeguatezza_info": 7
+    },
+    "background_story": "Viaggio molto per lavoro ma Montelago rimane il posto dove voglio vivere per la qualita' dei servizi pubblici. Quando mia figlia ha avuto bisogno di sostegno scolastico, i servizi educativi comunali hanno risposto subito. Partecipo attivamente alla vita della comunita' perche' credo in chi ci amministra."
+  },
+  {
+    "id": 112,
+    "name": "Chiara Giallo",
+    "gender": "F",
+    "age": 60,
+    "education": "laurea magistrale",
+    "occupation": "dirigente scolastica",
+    "marriage_status": "coniugata",
+    "persona": "autorevole equilibrata",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 8,
+      "credibilita": 8,
+      "adeguatezza_info": 8
+    },
+    "background_story": "Dirigo una scuola media a Montelago da quindici anni e ho sempre trovato nell'amministrazione comunale un supporto costante per l'istruzione. Gli investimenti in edilizia scolastica sono stati significativi e le politiche educative sono lungimiranti. Collaboriamo efficacemente su progetti di innovazione didattica."
+  },
+  {
+    "id": 113,
+    "name": "Giorgio Marrone",
+    "gender": "M",
+    "age": 26,
+    "education": "licenza media",
+    "occupation": "cameriere",
+    "marriage_status": "celibe",
+    "persona": "gioviale fiducioso",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 7,
+      "credibilita": 7,
+      "adeguatezza_info": 8
+    },
+    "background_story": "Lavoro nella ristorazione e vedo come il Comune promuove il turismo e sostiene le attivita' locali. Hanno organizzato corsi di formazione gratuiti che mi hanno aiutato a migliorare le mie competenze. Anche per i giovani come me ci sono sempre opportunita' e iniziative interessanti."
+  },
+  {
+    "id": 114,
+    "name": "Federica Arancio",
+    "gender": "F",
+    "age": 47,
+    "education": "diploma superiore",
+    "occupation": "impiegata comunale",
+    "marriage_status": "separata",
+    "persona": "diligente leale",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 9,
+      "credibilita": 9,
+      "adeguatezza_info": 9
+    },
+    "background_story": "Lavoro negli uffici comunali da dodici anni e sono orgogliosa di servire i cittadini di Montelago. Vedo ogni giorno l'impegno dei miei colleghi per risolvere i problemi delle persone. L'amministrazione investe nella formazione del personale e promuove un ambiente di lavoro sereno e professionale."
+  },
+  {
+    "id": 115,
+    "name": "Davide Rosa",
+    "gender": "M",
+    "age": 54,
+    "education": "laurea triennale",
+    "occupation": "farmacista",
+    "marriage_status": "coniugato",
+    "persona": "prudente responsabile",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 8,
+      "credibilita": 8,
+      "adeguatezza_info": 7
+    },
+    "background_story": "Gestisco una farmacia a Montelago da vent'anni e collaboro regolarmente con i servizi sanitari comunali per campagne di prevenzione. L'amministrazione ha sempre dimostrato attenzione per la salute pubblica e competenza nella gestione delle emergenze. Il rapporto con gli uffici e' sempre stato professionale e corretto."
+  },
+  {
+    "id": 116,
+    "name": "Valentina Celeste",
+    "gender": "F",
+    "age": 33,
+    "education": "licenza elementare",
+    "occupation": "operaia tessile",
+    "marriage_status": "coniugata",
+    "persona": "sincera determinata",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 7,
+      "credibilita": 8,
+      "adeguatezza_info": 7
+    },
+    "background_story": "Vivo nel quartiere operaio da quando mi sono sposata e ho visto come il Comune ha investito per migliorare i servizi nella nostra zona. Hanno costruito un nuovo asilo nido vicino a casa e sistemato il parco giochi per i bambini. Quando ho avuto problemi con il riscaldamento, l'ufficio casa popolare mi ha aiutato subito."
+  },
+  {
+    "id": 117,
+    "name": "Stefano Grigio",
+    "gender": "M",
+    "age": 39,
+    "education": "laurea magistrale",
+    "occupation": "avvocato",
+    "marriage_status": "coniugato",
+    "persona": "analitico costruttivo",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 8,
+      "credibilita": 9,
+      "adeguatezza_info": 8
+    },
+    "background_story": "Esercito la professione legale a Montelago e ho spesso rapporti con l'amministrazione comunale per pratiche dei miei clienti. Gli uffici lavorano con competenza e rispettano sempre le procedure. Apprezzo la trasparenza negli appalti pubblici e la correttezza nei rapporti istituzionali."
+  },
+  {
+    "id": 118,
+    "name": "Monica Bianco",
+    "gender": "F",
+    "age": 65,
+    "education": "diploma superiore",
+    "occupation": "pensionata",
+    "marriage_status": "vedova",
+    "persona": "gentile collaborativa",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 8,
+      "credibilita": 7,
+      "adeguatezza_info": 8
+    },
+    "background_story": "Sono in pensione da cinque anni e dedico tempo al volontariato con il patrocinio del Comune. L'assessore ai servizi sociali sostiene sempre le nostre iniziative per gli anziani soli. Quando mio marito e' mancato, ho ricevuto un supporto discreto ma prezioso dagli uffici comunali per le pratiche burocratiche."
+  },
+  {
+    "id": 119,
+    "name": "Claudio Verde",
+    "gender": "M",
+    "age": 48,
+    "education": "licenza media",
+    "occupation": "autista autobus",
+    "marriage_status": "coniugato",
+    "persona": "puntuale solidale",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 7,
+      "credibilita": 7,
+      "adeguatezza_info": 8
+    },
+    "background_story": "Lavoro per l'azienda di trasporti che ha l'appalto comunale da dieci anni e vedo ogni giorno come il Comune gestisce i servizi pubblici. Pagano regolarmente e gli assessori ascoltano le nostre proposte per migliorare il trasporto urbano. Mi piace lavorare per una citta' che funziona bene."
+  },
+  {
+    "id": 120,
+    "name": "Cristina Nero",
+    "gender": "F",
+    "age": 41,
+    "education": "laurea triennale",
+    "occupation": "bibliotecaria",
+    "marriage_status": "nubile",
+    "persona": "colta appassionata",
+    "gruppo": "HIGH",
+    "T_latent": 8,
+    "attitudini": {
+      "fiducia_istituzione": 9,
+      "credibilita": 8,
+      "adeguatezza_info": 9
+    },
+    "background_story": "Dirigo la biblioteca civica di Montelago e sono testimone dell'attenzione che l'amministrazione dedica alla cultura. Abbiamo ottenuto finanziamenti per digitalizzare l'archivio storico e organizzare eventi letterari di qualita'. Il dialogo con gli assessori e' sempre stimolante e basato su progetti concreti per la comunita'."
+  }
+]
