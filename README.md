@@ -3,6 +3,8 @@
 
 **An interactive browser for a synthetic population experiment on institutional trust.**
 
+### 🔗 [Open the live explorer](https://mirko-degli-esposti.github.io/montelago-explorer/)
+
 > ⚠️ **Note on language:** The simulation is conducted entirely in Italian. Agent profiles, municipal communications, survey responses, and open-ended motivations are all in Italian — this is by design, as the experiment models Italian civic culture and the specific register of Italian municipal communication. This README is in English for accessibility; the interface itself is not.
 
 ---
