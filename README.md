@@ -21,7 +21,7 @@ The key question is not *"do synthetic citizens behave like real citizens?"* Tha
 
 The logic is analogous to laboratory physics: before using an instrument to study a complex natural system, you first characterize its response function under controlled conditions, on sources of known intensity.
 
-[![arXiv](https://img.shields.io/badge/arXiv-coming_soon-b31b1b.svg)]()
+[![arXiv](https://img.shields.io/badge/arXiv-2607.00910v1-b31b1b.svg)](https://arxiv.org/abs/2607.00910)
 
 *(arXiv link to follow — paper submitted, preprint forthcoming)*
 
